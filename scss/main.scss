@@ -1,0 +1,328 @@
+@import "config";
+@import "utilities";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: $light-color;
+}
+
+a {
+  text-decoration: none;
+  color: $light-color;
+}
+
+ul {
+  list-style: none;
+}
+
+#home {
+  background: $primary-color url("../img/showcase.jpg") no-repeat center
+    center/cover;
+  height: 100vh;
+  position: relative;
+  background-attachment: fixed;
+
+  // Dark Overlay
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  // Navigation Bar
+  #navbar {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid rgba(177, 177, 177, 0.2);
+    background: rgba(0, 0, 0, 0.5);
+    padding-left: 2rem;
+    z-index: 2;
+    transition: background 0.5s ease-in-out;
+
+    .navbar-content {
+      height: 5rem;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 70%;
+      transition: height 0.4s ease-in-out;
+
+      .phone {
+        display: flex;
+        align-items: center;
+        color: $light-color;
+
+        i {
+          margin-right: 0.8rem;
+        }
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        color: $secondary-color;
+
+        // TODO: Make logo to be fully image, i.e. get rid of h2
+        h2 {
+          font-weight: normal;
+          font-size: 1.4rem;
+          text-transform: uppercase;
+          transition: font-size 0.5s ease-in-out;
+        }
+
+        img {
+          height: 45px;
+          margin-right: 10px;
+          transition: height 0.5s ease-in-out;
+        }
+      }
+
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        padding-right: 2rem;
+        height: 100%;
+
+        a {
+          font-size: 0.75rem;
+          text-decoration: none;
+          text-transform: uppercase;
+          border-bottom: 1px solid transparent;
+          padding-bottom: 0.15rem;
+          transition: border-color 0.5s;
+
+          &.current {
+            border-color: $secondary-color;
+          }
+
+          &:hover {
+            border-color: $light-color;
+          }
+        }
+      }
+    }
+  }
+
+  // Showcase area
+  #showcase {
+    width: 100%;
+    position: absolute;
+    top: 35%;
+
+    .showcase-content {
+      width: 70%;
+      color: $light-color;
+      margin: auto;
+      padding-left: 2rem;
+
+      p {
+        margin: 0;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 0.9rem;
+      }
+
+      .l-heading {
+        text-transform: uppercase;
+        font-weight: 700;
+
+        span {
+          margin-left: -5px;
+          text-align: left;
+          display: block;
+
+          &:last-child {
+            margin-top: 0.3rem;
+          }
+        }
+      }
+
+      .ruler {
+        width: 17.6rem;
+        height: 0.35rem;
+        background: $secondary-color;
+        margin: 0.5rem 0 0.6rem 0;
+      }
+    }
+  }
+}
+
+// Slider
+#gallery {
+  border-top: 5px solid $secondary-color;
+  border-bottom: 5px solid $secondary-color;
+}
+
+#slider,
+.slide-container,
+.wrap {
+  width: 100%;
+  height: 35rem;
+}
+
+.wrap {
+  position: relative;
+}
+
+#slider {
+  .slide {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .slide-container {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+
+      // Dark Overlay
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .slide-content {
+        position: absolute;
+        color: $light-color;
+        height: 100%;
+        z-index: 2;
+      }
+    }
+
+    &-1 {
+      background-image: url("../img/slider/slide1.jpg");
+      .slide-container {
+        display: flex;
+        align-items: center;
+
+        &::before {
+          background-image: linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0)
+          );
+        }
+
+        .slide-content {
+          display: flex;
+          align-items: center;
+          width: 35%;
+          height: 50%;
+          margin-left: 17%;
+          border-left: 5px solid $secondary-color;
+          line-height: 7rem;
+          padding-left: 1.5rem;
+
+          h3 {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    &-2 {
+      background-image: url("../img/slider/slide2.jpg");
+
+      .slide-container {
+        display: flex;
+        align-items: center;
+
+        &::before {
+          background-image: linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0)
+          );
+        }
+
+        .slide-content {
+          width: 35%;
+          height: 50%;
+          border-left: 5px solid $secondary-color;
+          margin-left: 17%;
+
+          display: flex;
+          flex-direction: column;
+          padding-left: 3.5rem;
+          text-align: left;
+          font-weight: 600;
+
+          h3 {
+            margin-top: -1.7rem;
+            margin-left: -6px;
+            padding-bottom: 0.7rem;
+            border-bottom: 5px solid $secondary-color;
+          }
+
+          ul {
+            margin-top: 0.9rem;
+            font-size: 3rem;
+
+            li {
+              margin-bottom: 0.6rem;
+            }
+          }
+        }
+      }
+    }
+
+    &-3 {
+      background-image: url("../img/slider/slide3.jpg");
+    }
+  }
+}
+
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+
+  color: $secondary-color;
+  z-index: 2;
+
+  &-left {
+    left: 0;
+    margin-left: 30px;
+  }
+  &-right {
+    right: 0;
+    margin-right: 30px;
+  }
+}
+
+// Footer
+#main-footer {
+  background: $primary-color;
+
+  .footer-content {
+    padding: 1rem;
+    text-align: center;
+    color: $light-color;
+    font-size: 0.85rem;
+    word-spacing: 0.15rem;
+  }
+}

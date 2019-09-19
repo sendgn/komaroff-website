@@ -1,0 +1,40 @@
+.container {
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+.current {
+  a {
+    border-bottom: 2px solid $light-color;
+  }
+}
+
+.l-heading {
+  font-size: 5rem;
+}
+
+.m-heading {
+  font-size: 3.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.lead {
+  font-size: 1.4rem;
+}
+
+.my-1 {
+  margin: 1rem 0;
+}
+.my-2 {
+  margin: 2rem 0;
+}
+.my-3 {
+  margin: 3rem 0;
+}
+.my-4 {
+  margin: 4rem 0;
+}
