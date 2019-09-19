@@ -37,7 +37,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background: #f4f4f4; }
+  background: #333; }
 
 a {
   text-decoration: none;
@@ -148,8 +148,6 @@ ul {
 #gallery {
   border-top: 5px solid #ffc046;
   border-bottom: 5px solid #ffc046; }
-  #gallery .arrow {
-    text-shadow: 0 0 3px #333; }
 
 #slider,
 .slide-container,
@@ -186,7 +184,7 @@ ul {
       display: flex;
       align-items: center; }
       #slider .slide-1 .slide-container::before {
-        background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)); }
+        background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)); }
       #slider .slide-1 .slide-container .slide-content {
         display: flex;
         align-items: center;
@@ -244,8 +242,12 @@ ul {
   position: absolute;
   top: 50%;
   margin-top: -20px;
+  text-shadow: 0 0 3px #333;
   color: #ffc046;
-  z-index: 2; }
+  z-index: 2;
+  transition: all 0.3s ease-in-out; }
+  .arrow:hover {
+    color: #f4f4f4; }
   .arrow-left {
     left: 0;
     margin-left: 30px; }

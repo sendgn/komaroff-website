@@ -9,7 +9,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background: $light-color;
+  background: $primary-color;
 }
 
 a {
@@ -170,10 +170,6 @@ ul {
 #gallery {
   border-top: 5px solid $secondary-color;
   border-bottom: 5px solid $secondary-color;
-
-  .arrow {
-    text-shadow: 0 0 3px $primary-color;
-  }
 }
 
 #slider,
@@ -225,7 +221,7 @@ ul {
         &::before {
           background-image: linear-gradient(
             90deg,
-            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.6),
             rgba(0, 0, 0, 0)
           );
         }
@@ -327,9 +323,14 @@ ul {
   position: absolute;
   top: 50%;
   margin-top: -20px;
-
+  text-shadow: 0 0 3px $primary-color;
   color: $secondary-color;
   z-index: 2;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: $light-color;
+  }
 
   &-left {
     left: 0;
