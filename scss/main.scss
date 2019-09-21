@@ -7,9 +7,13 @@
   box-sizing: border-box;
 }
 
+html,
 body {
-  font-family: "Montserrat", sans-serif;
+  height: 100%;
   background: $primary-color;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.03rem;
+  word-spacing: 0.5rem;
 }
 
 a {
@@ -21,10 +25,92 @@ ul {
   list-style: none;
 }
 
-#home {
-  background: $primary-color url("../img/showcase.jpg") no-repeat center
-    center/cover;
-  height: 100vh;
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+
+  border-bottom: 1px solid rgba(177, 177, 177, 0.2);
+  background: rgba(0, 0, 0, 0.5);
+  padding-left: 2rem;
+  transition: background 0.5s ease-in-out;
+
+  .navbar-content {
+    height: 5rem;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: height 0.4s ease-in-out;
+
+    .phone {
+      display: flex;
+      align-items: center;
+      color: $light-color;
+
+      i {
+        margin-right: 0.8rem;
+      }
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      color: $secondary-color;
+
+      // TODO: Make logo to be fully image, i.e. get rid of h2
+      h2 {
+        font-weight: normal;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        transition: font-size 0.5s ease-in-out;
+      }
+
+      img {
+        height: 45px;
+        margin-right: 10px;
+        transition: height 0.5s ease-in-out;
+      }
+    }
+
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      padding-right: 2rem;
+      height: 100%;
+
+      a {
+        font-size: 0.75rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-bottom: 1px solid transparent;
+        padding-bottom: 0.15rem;
+        transition: border-color 0.5s;
+
+        &.current {
+          border-color: $secondary-color;
+        }
+
+        &:hover {
+          border-color: $light-color;
+        }
+      }
+    }
+  }
+}
+
+// Showcase area
+#showcase {
+  background: url("../img/showcase.jpg") no-repeat center center/cover;
   position: relative;
   background-attachment: fixed;
 
@@ -39,100 +125,15 @@ ul {
     background: rgba(0, 0, 0, 0.7);
   }
 
-  // Navigation Bar
-  #navbar {
-    width: 100%;
-    position: sticky;
-    top: 0;
-    border-bottom: 1px solid rgba(177, 177, 177, 0.2);
-    background: rgba(0, 0, 0, 0.5);
+  .showcase-content {
+    width: 70%;
+    margin: auto;
     padding-left: 2rem;
-    z-index: 2;
-    transition: background 0.5s ease-in-out;
+    color: $light-color;
 
-    .navbar-content {
-      height: 5rem;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 70%;
-      transition: height 0.4s ease-in-out;
-
-      .phone {
-        display: flex;
-        align-items: center;
-        color: $light-color;
-
-        i {
-          margin-right: 0.8rem;
-        }
-      }
-
-      .logo {
-        display: flex;
-        align-items: center;
-        color: $secondary-color;
-
-        // TODO: Make logo to be fully image, i.e. get rid of h2
-        h2 {
-          font-weight: normal;
-          font-size: 1.4rem;
-          text-transform: uppercase;
-          transition: font-size 0.5s ease-in-out;
-        }
-
-        img {
-          height: 45px;
-          margin-right: 10px;
-          transition: height 0.5s ease-in-out;
-        }
-      }
-
-      ul {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-      }
-
-      li {
-        display: flex;
-        align-items: center;
-        padding-right: 2rem;
-        height: 100%;
-
-        a {
-          font-size: 0.75rem;
-          text-decoration: none;
-          text-transform: uppercase;
-          border-bottom: 1px solid transparent;
-          padding-bottom: 0.15rem;
-          transition: border-color 0.5s;
-
-          &.current {
-            border-color: $secondary-color;
-          }
-
-          &:hover {
-            border-color: $light-color;
-          }
-        }
-      }
-    }
-  }
-
-  // Showcase area
-  #showcase {
-    width: 100%;
-    position: absolute;
-    top: 35%;
-
-    .showcase-content {
-      width: 70%;
-      color: $light-color;
-      margin: auto;
-      padding-left: 2rem;
+    .wrap {
+      position: absolute;
+      top: 35%;
 
       p {
         margin: 0;
@@ -141,33 +142,26 @@ ul {
         margin-bottom: 0.9rem;
       }
 
-      .l-heading {
+      h2 {
         text-transform: uppercase;
         font-weight: 700;
 
         span {
+          &:first-child {
+            border-bottom: 5px solid $secondary-color;
+          }
+
           margin-left: -5px;
           text-align: left;
           display: block;
-
-          &:last-child {
-            margin-top: 0.3rem;
-          }
         }
-      }
-
-      .ruler {
-        width: 17.6rem;
-        height: 0.35rem;
-        background: $secondary-color;
-        margin: 0.5rem 0 0.6rem 0;
       }
     }
   }
 }
 
 // Slider
-#gallery {
+#slider-section {
   border-top: 5px solid $secondary-color;
   border-bottom: 5px solid $secondary-color;
 }
@@ -339,6 +333,19 @@ ul {
   &-right {
     right: 0;
     margin-right: 30px;
+  }
+}
+
+#gallery {
+  .photo-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 0 2rem 0 2rem;
+
+    img {
+      width: 100%;
+    }
   }
 }
 
