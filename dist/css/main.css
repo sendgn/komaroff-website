@@ -28,7 +28,7 @@
   font-size: 3rem; }
 
 .m-text {
-  font-size: 1.5rem; }
+  font-size: 1.67rem; }
 
 .s-text {
   font-size: 0.5rem; }
@@ -106,11 +106,10 @@ ul {
   z-index: 2;
   border-bottom: 1px solid rgba(177, 177, 177, 0.2);
   background: rgba(0, 0, 0, 0.5);
-  padding-left: 2rem;
   transition: background 0.5s ease-in-out; }
   #navbar .navbar-content {
     height: 5rem;
-    width: 70%;
+    max-width: 1140px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -156,11 +155,19 @@ ul {
         #navbar .navbar-content li a:hover {
           border-color: #f4f4f4; }
 
-#showcase {
-  background: url("../img/showcase.jpg") no-repeat center center/cover;
+#showcase > .bg-parallax {
+  background: url("../img/showcase.jpg"); }
+
+#showcase .bg-parallax {
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
   position: relative;
-  background-attachment: fixed; }
-  #showcase::before {
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; }
+  #showcase .bg-parallax::before {
     content: "";
     position: absolute;
     top: 0;
@@ -168,28 +175,37 @@ ul {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.7); }
-  #showcase .showcase-content {
-    width: 70%;
-    margin: auto;
-    padding-left: 2rem;
-    color: #f4f4f4; }
-    #showcase .showcase-content .wrap {
-      position: absolute;
-      top: 35%; }
-      #showcase .showcase-content .wrap p {
-        margin: 0;
-        text-transform: uppercase;
-        font-weight: 600;
-        margin-bottom: 0.9rem; }
-      #showcase .showcase-content .wrap h2 {
-        text-transform: uppercase;
-        font-weight: 700; }
-        #showcase .showcase-content .wrap h2 span {
-          margin-left: -5px;
-          text-align: left;
-          display: block; }
-          #showcase .showcase-content .wrap h2 span:first-child {
-            border-bottom: 5px solid #ffc046; }
+
+#showcase > *:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+  #showcase > *:nth-child(2) .container {
+    max-width: 1140px; }
+    #showcase > *:nth-child(2) .container .row {
+      display: flex;
+      align-items: center; }
+      #showcase > *:nth-child(2) .container .row .col {
+        flex: 0 0 60%;
+        max-width: 60%;
+        color: #f4f4f4;
+        position: relative;
+        width: 100%;
+        text-transform: uppercase; }
+        #showcase > *:nth-child(2) .container .row .col p {
+          font-weight: 600;
+          margin-bottom: 0.5rem; }
+        #showcase > *:nth-child(2) .container .row .col h2 {
+          font-weight: 700; }
+          #showcase > *:nth-child(2) .container .row .col h2 span {
+            margin-left: -5px;
+            display: block; }
+            #showcase > *:nth-child(2) .container .row .col h2 span:first-child {
+              padding-bottom: 0.5rem;
+              margin-bottom: 0.6rem;
+              border-bottom: 5px solid #ffc046; }
 
 #slider-section {
   border-top: 5px solid #ffc046;
