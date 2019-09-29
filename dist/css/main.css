@@ -1,7 +1,7 @@
 .container {
   width: 100%;
   margin: auto;
-  padding: 0 15px;
+  padding: 0 8px;
   overflow: hidden; }
 
 .current a {
@@ -229,7 +229,7 @@ ul {
               margin-bottom: 1rem;
               padding-top: 1.5rem;
               padding-bottom: 1.5rem; }
-            #showcase #slider-container #slider .slide-1 .slide-container .slide-content h3 {
+            #showcase #slider-container #slider .slide-1 .slide-container .slide-content h1 {
               text-transform: uppercase;
               margin-left: -7px;
               font-size: 4.2rem;
@@ -286,14 +286,14 @@ ul {
         color: #f4f4f4; }
 
 #gallery {
-  margin: auto;
+  margin: 0 auto;
   width: 1400px;
   background-color: #101010;
-  padding: 1rem 0; }
+  padding: 10px 0; }
   #gallery .photos {
     display: grid;
-    grid-template-areas: "img-1 img-2 img-3 img-4" "img-5 img-6 img-7 img-10" "img-5 img-8 img-9 img-10";
-    gap: 0.5rem; }
+    grid-template-areas: "img-1 img-2 img-3 img-4" "img-13 img-5 img-6 img-14" "img-13 img-7 img-8 img-14" "img-15 img-9 img-10 img-16" "img-15 img-11 img-12 img-16" "img-17 img-18 img-19 img-20";
+    gap: 8px; }
     #gallery .photos img {
       width: 100%; }
       #gallery .photos img:first-child {
@@ -316,6 +316,26 @@ ul {
         grid-area: img-9; }
       #gallery .photos img:nth-child(10) {
         grid-area: img-10; }
+      #gallery .photos img:nth-child(11) {
+        grid-area: img-11; }
+      #gallery .photos img:nth-child(12) {
+        grid-area: img-12; }
+      #gallery .photos img:nth-child(13) {
+        grid-area: img-13; }
+      #gallery .photos img:nth-child(14) {
+        grid-area: img-14; }
+      #gallery .photos img:nth-child(15) {
+        grid-area: img-15; }
+      #gallery .photos img:nth-child(16) {
+        grid-area: img-16; }
+      #gallery .photos img:nth-child(17) {
+        grid-area: img-17; }
+      #gallery .photos img:nth-child(18) {
+        grid-area: img-18; }
+      #gallery .photos img:nth-child(19) {
+        grid-area: img-19; }
+      #gallery .photos img:nth-child(20) {
+        grid-area: img-20; }
 
 #main-footer {
   background: #101010; }
