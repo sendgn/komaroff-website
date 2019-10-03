@@ -107,25 +107,32 @@ ul {
 }
 
 // Showcase area
-#showcase {
+header#showcase {
   height: 100%;
 
   // Slider
   #slider,
-  .slide-container,
-  .wrap {
+  .slide-container {
     width: 100%;
     height: 92.5vh;
   }
 
-  .wrap {
+  .slide-container {
     position: relative;
   }
 
-  #slider-container {
+  .wrap {
     position: relative;
     top: 5rem;
-    // border-bottom: 1px solid $secondary-color;
+
+    .line {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 0.5rem;
+      background: $primary-color;
+      z-index: 1;
+    }
 
     // Arrows
     .arrow {
@@ -214,7 +221,7 @@ ul {
                 padding-bottom: 1.5rem;
               }
 
-              h1 {
+              h2 {
                 text-transform: uppercase;
                 margin-left: -7px;
                 font-size: 4.2rem;
@@ -241,7 +248,7 @@ ul {
             &::before {
               background-image: linear-gradient(
                 90deg,
-                rgba(0, 0, 0, 0.9),
+                rgba(0, 0, 0, 0.8),
                 rgba(0, 0, 0, 0)
               );
             }
@@ -315,13 +322,40 @@ ul {
   }
 }
 
+.benefits {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: $tertiary-color;
+  color: $light-color;
+  // text-transform: uppercase;
+  font-size: 2.5rem;
+
+  ul {
+    padding: 3rem 0;
+    li {
+      padding: 0.4rem 0;
+      span {
+        color: $secondary-color;
+        font-weight: 700;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  .micro-gallery {
+    img {
+      width: 10rem;
+    }
+  }
+}
+
 // Photo Gallery
 #gallery {
+  display: block;
+  width: 100%;
   margin: 0 auto;
-
-  width: 1400px;
   background-color: $primary-color;
-  padding: 10px 0;
 
   .photos {
     display: grid;
@@ -332,7 +366,7 @@ ul {
       "img-15 img-9 img-10 img-16"
       "img-15 img-11 img-12 img-16"
       "img-17 img-18 img-19 img-20";
-    gap: 8px;
+    // gap: 8px;
 
     img {
       width: 100%;
@@ -399,6 +433,12 @@ ul {
       }
     }
   }
+}
+
+// Price-list
+#price {
+  height: 50vh;
+  background: $light-color;
 }
 
 // Footer

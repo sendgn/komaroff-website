@@ -70,8 +70,17 @@
 .p-3 {
   padding: 3rem; }
 
+.py-1 {
+  padding: 1rem 0; }
+
+.py-2 {
+  padding: 2rem 0; }
+
+.py-3 {
+  padding: 3rem 0; }
+
 .bg-dark {
-  background-color: #050505; }
+  background-color: #202020; }
 
 .bg-primary {
   background-color: #101010; }
@@ -90,7 +99,7 @@
 html,
 body {
   height: 100%;
-  background: #050505;
+  background: #202020;
   font-family: "Montserrat", sans-serif; }
 
 a {
@@ -158,19 +167,25 @@ ul {
         #navbar .navbar-content li a:hover {
           border-color: #f4f4f4; }
 
-#showcase {
+header#showcase {
   height: 100%; }
-  #showcase #slider,
-  #showcase .slide-container,
-  #showcase .wrap {
+  header#showcase #slider,
+  header#showcase .slide-container {
     width: 100%;
     height: 92.5vh; }
-  #showcase .wrap {
+  header#showcase .slide-container {
     position: relative; }
-  #showcase #slider-container {
+  header#showcase .wrap {
     position: relative;
     top: 5rem; }
-    #showcase #slider-container .arrow {
+    header#showcase .wrap .line {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 0.5rem;
+      background: #101010;
+      z-index: 1; }
+    header#showcase .wrap .arrow {
       cursor: pointer;
       position: absolute;
       top: 50%;
@@ -179,43 +194,43 @@ ul {
       color: #ffc046;
       z-index: 2;
       transition: all 0.3s ease-in-out; }
-      #showcase #slider-container .arrow:hover {
+      header#showcase .wrap .arrow:hover {
         color: #f4f4f4; }
-      #showcase #slider-container .arrow-left {
+      header#showcase .wrap .arrow-left {
         left: 0;
         margin-left: 30px; }
-      #showcase #slider-container .arrow-right {
+      header#showcase .wrap .arrow-right {
         right: 0;
         margin-right: 30px; }
-    #showcase #slider-container #slider .slide {
+    header#showcase .wrap #slider .slide {
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       text-shadow: 0 0 2px #101010; }
-      #showcase #slider-container #slider .slide .slide-container {
+      header#showcase .wrap #slider .slide .slide-container {
         text-align: center;
         position: relative;
         z-index: 1; }
-        #showcase #slider-container #slider .slide .slide-container::before {
+        header#showcase .wrap #slider .slide .slide-container::before {
           content: "";
           position: absolute;
           top: 0;
           left: 0;
           width: 100%;
           height: 100%; }
-        #showcase #slider-container #slider .slide .slide-container .slide-content {
+        header#showcase .wrap #slider .slide .slide-container .slide-content {
           position: absolute;
           color: #f4f4f4;
           height: 100%;
           z-index: 2; }
-      #showcase #slider-container #slider .slide-1 {
+      header#showcase .wrap #slider .slide-1 {
         background-image: url("../img/slider/slide1.jpg"); }
-        #showcase #slider-container #slider .slide-1 .slide-container {
+        header#showcase .wrap #slider .slide-1 .slide-container {
           display: flex;
           align-items: center; }
-          #showcase #slider-container #slider .slide-1 .slide-container::before {
+          header#showcase .wrap #slider .slide-1 .slide-container::before {
             background-image: linear-gradient(90deg, black, rgba(0, 0, 0, 0)); }
-          #showcase #slider-container #slider .slide-1 .slide-container .slide-content {
+          header#showcase .wrap #slider .slide-1 .slide-container .slide-content {
             display: flex;
             align-items: center;
             text-align: left;
@@ -224,29 +239,29 @@ ul {
             margin-left: 17%;
             border-left: 5px solid #ffc046;
             padding-left: 3.5rem; }
-            #showcase #slider-container #slider .slide-1 .slide-container .slide-content p {
+            header#showcase .wrap #slider .slide-1 .slide-container .slide-content p {
               font-weight: 600;
               margin-bottom: 1rem;
               padding-top: 1.5rem;
               padding-bottom: 1.5rem; }
-            #showcase #slider-container #slider .slide-1 .slide-container .slide-content h1 {
+            header#showcase .wrap #slider .slide-1 .slide-container .slide-content h2 {
               text-transform: uppercase;
               margin-left: -7px;
               font-size: 4.2rem;
               font-weight: 700;
               padding-bottom: 1rem;
               border-bottom: 5px solid #ffc046; }
-            #showcase #slider-container #slider .slide-1 .slide-container .slide-content span {
+            header#showcase .wrap #slider .slide-1 .slide-container .slide-content span {
               display: block;
               padding-bottom: 0.5rem; }
-      #showcase #slider-container #slider .slide-2 {
+      header#showcase .wrap #slider .slide-2 {
         background-image: url("../img/slider/slide2.jpg"); }
-        #showcase #slider-container #slider .slide-2 .slide-container {
+        header#showcase .wrap #slider .slide-2 .slide-container {
           display: flex;
           align-items: center; }
-          #showcase #slider-container #slider .slide-2 .slide-container::before {
-            background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)); }
-          #showcase #slider-container #slider .slide-2 .slide-container .slide-content {
+          header#showcase .wrap #slider .slide-2 .slide-container::before {
+            background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); }
+          header#showcase .wrap #slider .slide-2 .slide-container .slide-content {
             width: 35%;
             height: 50%;
             border-left: 5px solid #ffc046;
@@ -257,43 +272,60 @@ ul {
             padding-left: 3.5rem;
             text-align: left;
             font-weight: 600; }
-            #showcase #slider-container #slider .slide-2 .slide-container .slide-content h3 {
+            header#showcase .wrap #slider .slide-2 .slide-container .slide-content h3 {
               margin-left: -6px;
               padding-bottom: 0.7rem;
               border-bottom: 5px solid #ffc046; }
-            #showcase #slider-container #slider .slide-2 .slide-container .slide-content ul {
+            header#showcase .wrap #slider .slide-2 .slide-container .slide-content ul {
               margin-top: 0.9rem;
               font-size: 3rem; }
-              #showcase #slider-container #slider .slide-2 .slide-container .slide-content ul li {
+              header#showcase .wrap #slider .slide-2 .slide-container .slide-content ul li {
                 margin-bottom: 0.6rem; }
-      #showcase #slider-container #slider .slide-3 {
+      header#showcase .wrap #slider .slide-3 {
         background-image: url("../img/slider/slide3.jpg"); }
-        #showcase #slider-container #slider .slide-3 .slide-container {
+        header#showcase .wrap #slider .slide-3 .slide-container {
           display: flex;
           align-items: center;
           justify-content: center; }
-          #showcase #slider-container #slider .slide-3 .slide-container::before {
+          header#showcase .wrap #slider .slide-3 .slide-container::before {
             background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)); }
-          #showcase #slider-container #slider .slide-3 .slide-container .slide-content {
+          header#showcase .wrap #slider .slide-3 .slide-container .slide-content {
             display: flex;
             align-items: center; }
-            #showcase #slider-container #slider .slide-3 .slide-container .slide-content span {
+            header#showcase .wrap #slider .slide-3 .slide-container .slide-content span {
               border-bottom: 5px solid #ffc046; }
-      #showcase #slider-container #slider .slide .text-bottom {
+      header#showcase .wrap #slider .slide .text-bottom {
         height: 5rem;
         background: #101010;
         font-size: 4rem;
         color: #f4f4f4; }
 
+.benefits {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #b71c1c;
+  color: #f4f4f4;
+  font-size: 2.5rem; }
+  .benefits ul {
+    padding: 3rem 0; }
+    .benefits ul li {
+      padding: 0.4rem 0; }
+      .benefits ul li span {
+        color: #ffc046;
+        font-weight: 700;
+        margin-right: 0.5rem; }
+  .benefits .micro-gallery img {
+    width: 10rem; }
+
 #gallery {
+  display: block;
+  width: 100%;
   margin: 0 auto;
-  width: 1400px;
-  background-color: #101010;
-  padding: 10px 0; }
+  background-color: #101010; }
   #gallery .photos {
     display: grid;
-    grid-template-areas: "img-1 img-2 img-3 img-4" "img-13 img-5 img-6 img-14" "img-13 img-7 img-8 img-14" "img-15 img-9 img-10 img-16" "img-15 img-11 img-12 img-16" "img-17 img-18 img-19 img-20";
-    gap: 8px; }
+    grid-template-areas: "img-1 img-2 img-3 img-4" "img-13 img-5 img-6 img-14" "img-13 img-7 img-8 img-14" "img-15 img-9 img-10 img-16" "img-15 img-11 img-12 img-16" "img-17 img-18 img-19 img-20"; }
     #gallery .photos img {
       width: 100%; }
       #gallery .photos img:first-child {
@@ -336,6 +368,10 @@ ul {
         grid-area: img-19; }
       #gallery .photos img:nth-child(20) {
         grid-area: img-20; }
+
+#price {
+  height: 50vh;
+  background: #f4f4f4; }
 
 #main-footer {
   background: #101010; }
