@@ -300,22 +300,22 @@ header#showcase {
         font-size: 4rem;
         color: #f4f4f4; }
 
-.benefits {
+#benefits {
   display: flex;
   align-items: center;
   justify-content: space-around;
   background: #b71c1c;
   color: #f4f4f4;
   font-size: 2.5rem; }
-  .benefits ul {
+  #benefits ul {
     padding: 3rem 0; }
-    .benefits ul li {
+    #benefits ul li {
       padding: 0.4rem 0; }
-      .benefits ul li span {
+      #benefits ul li span {
         color: #ffc046;
         font-weight: 700;
         margin-right: 0.5rem; }
-  .benefits .micro-gallery img {
+  #benefits .micro-gallery img {
     width: 10rem; }
 
 #gallery {
@@ -323,51 +323,56 @@ header#showcase {
   width: 100%;
   margin: 0 auto;
   background-color: #101010; }
+  #gallery .gallery-heading {
+    width: 100%;
+    height: 8rem;
+    background: #000; }
+    #gallery .gallery-heading h2 {
+      color: #f4f4f4;
+      font-size: 3rem;
+      font-weight: 500;
+      padding-top: 2rem; }
   #gallery .photos {
     display: grid;
-    grid-template-areas: "img-1 img-2 img-3 img-4" "img-13 img-5 img-6 img-14" "img-13 img-7 img-8 img-14" "img-15 img-9 img-10 img-16" "img-15 img-11 img-12 img-16" "img-17 img-18 img-19 img-20"; }
-    #gallery .photos img {
+    grid-template-areas: "img-1 img-2 img-3 img-4 img-5" "img-13 img-6 img-7 img-8 img-14" "img-13 img-9 img-10 img-11 img-14" "img-12 img-15 img-16 img-17 img-18"; }
+    #gallery .photos div > img {
       width: 100%; }
-      #gallery .photos img:first-child {
-        grid-area: img-1; }
-      #gallery .photos img:nth-child(2) {
-        grid-area: img-2; }
-      #gallery .photos img:nth-child(3) {
-        grid-area: img-3; }
-      #gallery .photos img:nth-child(4) {
-        grid-area: img-4; }
-      #gallery .photos img:nth-child(5) {
-        grid-area: img-5; }
-      #gallery .photos img:nth-child(6) {
-        grid-area: img-6; }
-      #gallery .photos img:nth-child(7) {
-        grid-area: img-7; }
-      #gallery .photos img:nth-child(8) {
-        grid-area: img-8; }
-      #gallery .photos img:nth-child(9) {
-        grid-area: img-9; }
-      #gallery .photos img:nth-child(10) {
-        grid-area: img-10; }
-      #gallery .photos img:nth-child(11) {
-        grid-area: img-11; }
-      #gallery .photos img:nth-child(12) {
-        grid-area: img-12; }
-      #gallery .photos img:nth-child(13) {
-        grid-area: img-13; }
-      #gallery .photos img:nth-child(14) {
-        grid-area: img-14; }
-      #gallery .photos img:nth-child(15) {
-        grid-area: img-15; }
-      #gallery .photos img:nth-child(16) {
-        grid-area: img-16; }
-      #gallery .photos img:nth-child(17) {
-        grid-area: img-17; }
-      #gallery .photos img:nth-child(18) {
-        grid-area: img-18; }
-      #gallery .photos img:nth-child(19) {
-        grid-area: img-19; }
-      #gallery .photos img:nth-child(20) {
-        grid-area: img-20; }
+    #gallery .photos div:first-child {
+      grid-area: img-1; }
+    #gallery .photos div:nth-child(2) {
+      grid-area: img-2; }
+    #gallery .photos div:nth-child(3) {
+      grid-area: img-3; }
+    #gallery .photos div:nth-child(4) {
+      grid-area: img-4; }
+    #gallery .photos div:nth-child(5) {
+      grid-area: img-5; }
+    #gallery .photos div:nth-child(6) {
+      grid-area: img-6; }
+    #gallery .photos div:nth-child(7) {
+      grid-area: img-7; }
+    #gallery .photos div:nth-child(8) {
+      grid-area: img-8; }
+    #gallery .photos div:nth-child(9) {
+      grid-area: img-9; }
+    #gallery .photos div:nth-child(10) {
+      grid-area: img-10; }
+    #gallery .photos div:nth-child(11) {
+      grid-area: img-11; }
+    #gallery .photos div:nth-child(12) {
+      grid-area: img-12; }
+    #gallery .photos div:nth-child(13) {
+      grid-area: img-13; }
+    #gallery .photos div:nth-child(14) {
+      grid-area: img-14; }
+    #gallery .photos div:nth-child(15) {
+      grid-area: img-15; }
+    #gallery .photos div:nth-child(16) {
+      grid-area: img-16; }
+    #gallery .photos div:nth-child(17) {
+      grid-area: img-17; }
+    #gallery .photos div:nth-child(18) {
+      grid-area: img-18; }
 
 #price {
   height: 50vh;

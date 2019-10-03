@@ -322,7 +322,7 @@ header#showcase {
   }
 }
 
-.benefits {
+#benefits {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -357,19 +357,38 @@ header#showcase {
   margin: 0 auto;
   background-color: $primary-color;
 
+  .gallery-heading {
+    width: 100%;
+    height: 8rem;
+    background: #000;
+
+    h2 {
+      color: $light-color;
+      font-size: 3rem;
+      font-weight: 500;
+      padding-top: 2rem;
+    }
+  }
+
   .photos {
     display: grid;
     grid-template-areas:
-      "img-1 img-2 img-3 img-4"
-      "img-13 img-5 img-6 img-14"
-      "img-13 img-7 img-8 img-14"
-      "img-15 img-9 img-10 img-16"
-      "img-15 img-11 img-12 img-16"
-      "img-17 img-18 img-19 img-20";
+      // "img-1 img-2 img-3 img-4"
+      // "img-13 img-5 img-6 img-14"
+      // "img-13 img-7 img-8 img-14"
+      // "img-15 img-9 img-10 img-16"
+      // "img-15 img-11 img-12 img-16"
+      // "img-17 img-18 img-19 img-20";
+      "img-1 img-2 img-3 img-4 img-5"
+      "img-13 img-6 img-7 img-8 img-14"
+      "img-13 img-9 img-10 img-11 img-14"
+      "img-12 img-15 img-16 img-17 img-18";
     // gap: 8px;
 
-    img {
-      width: 100%;
+    div {
+      & > img {
+        width: 100%;
+      }
 
       &:first-child {
         grid-area: img-1;
@@ -425,12 +444,12 @@ header#showcase {
       &:nth-child(18) {
         grid-area: img-18;
       }
-      &:nth-child(19) {
-        grid-area: img-19;
-      }
-      &:nth-child(20) {
-        grid-area: img-20;
-      }
+      // &:nth-child(19) {
+      //   grid-area: img-19;
+      // }
+      // &:nth-child(20) {
+      //   grid-area: img-20;
+      // }
     }
   }
 }
