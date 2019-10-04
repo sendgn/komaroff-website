@@ -292,47 +292,48 @@ header#showcase {
         font-size: 4rem;
         color: #f4f4f4; }
 
-#benefits {
-  background: #ffc046;
-  color: #101010;
-  font-size: 2rem; }
-  #benefits .wrap {
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1268px; }
-    #benefits .wrap ul {
-      flex: 1;
-      padding: 3rem 0;
-      font-weight: 500; }
-      #benefits .wrap ul li {
-        padding: 0.4rem 0; }
-        #benefits .wrap ul li span {
-          color: #b71c1c;
-          font-weight: 700;
-          font-size: 2.5rem;
-          margin-right: 0.5rem; }
-    #benefits .wrap .micro-gallery {
-      flex: 1;
-      display: flex;
-      justify-content: space-between; }
-      #benefits .wrap .micro-gallery .image {
-        box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.2); }
-        #benefits .wrap .micro-gallery .image img {
-          height: 100%;
-          width: 6.5rem;
-          transition: all 0.1s ease; }
-          #benefits .wrap .micro-gallery .image img:hover {
-            transform: scale(1.2);
-            cursor: zoom-in; }
-
 #gallery {
   width: 100%;
   background: url("../img/showcase.jpg") no-repeat center top/cover;
   background-attachment: fixed;
   position: relative;
+  padding-top: 5px;
   z-index: 1; }
+  #gallery #benefits {
+    position: relative;
+    background: #101010;
+    color: #f4f4f4;
+    font-size: 2rem; }
+    #gallery #benefits .benefits-wrap {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1268px; }
+      #gallery #benefits .benefits-wrap ul {
+        flex: 1;
+        padding: 3rem 0;
+        font-weight: 500; }
+        #gallery #benefits .benefits-wrap ul li {
+          padding: 0.4rem 0; }
+          #gallery #benefits .benefits-wrap ul li span {
+            color: #ffc046;
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-right: 0.5rem; }
+      #gallery #benefits .benefits-wrap .micro-gallery {
+        flex: 1;
+        display: flex;
+        justify-content: space-between; }
+        #gallery #benefits .benefits-wrap .micro-gallery .image {
+          box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.2); }
+          #gallery #benefits .benefits-wrap .micro-gallery .image img {
+            height: 100%;
+            width: 6.5rem;
+            transition: all 0.1s ease; }
+            #gallery #benefits .benefits-wrap .micro-gallery .image img:hover {
+              transform: scale(1.2);
+              cursor: zoom-in; }
   #gallery::before {
     content: "";
     position: absolute;
@@ -341,41 +342,74 @@ header#showcase {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5); }
-  #gallery .wrap {
+  #gallery .gallery-wrap {
     z-index: 2;
     position: relative; }
-    #gallery .wrap .gallery-heading {
+    #gallery .gallery-wrap .gallery-heading {
       width: 100%;
-      height: 8rem;
-      background: #202020; }
-      #gallery .wrap .gallery-heading h2 {
+      background: #202020;
+      margin-top: 5px;
+      padding: 2rem 0; }
+      #gallery .gallery-wrap .gallery-heading h2 {
         color: #f4f4f4;
         font-size: 3rem;
         font-weight: 500;
         text-transform: uppercase;
-        padding-top: 2rem; }
-      #gallery .wrap .gallery-heading span {
-        color: #ffc046;
-        font-weight: 700; }
-    #gallery .wrap .photos {
+        padding-bottom: 0.2rem; }
+        #gallery .gallery-wrap .gallery-heading h2 span {
+          color: #ffc046;
+          font-weight: 700; }
+      #gallery .gallery-wrap .gallery-heading p {
+        color: #f4f4f4;
+        font-size: 1.1rem;
+        padding: 0.3rem 0; }
+    #gallery .gallery-wrap .photos {
       max-width: 1266px;
       margin: auto;
       overflow: hidden;
       padding: 5px 0; }
-      #gallery .wrap .photos .imgs {
+      #gallery .gallery-wrap .photos .imgs {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 5px; }
-        #gallery .wrap .photos .imgs img {
-          width: 100%;
-          transition: all 0.3s ease; }
-          #gallery .wrap .photos .imgs img:hover {
-            transform: scale(1.1);
+        #gallery .gallery-wrap .photos .imgs .img-wrapper {
+          overflow: hidden; }
+          #gallery .gallery-wrap .photos .imgs .img-wrapper:hover img,
+          #gallery .gallery-wrap .photos .imgs .img-wrapper:focus img {
+            transform: scale(1.2);
             cursor: zoom-in; }
+          #gallery .gallery-wrap .photos .imgs .img-wrapper img {
+            width: 100%;
+            display: block;
+            transition: all 0.3s ease; }
 
 #price {
-  height: 50vh;
-  background: #f4f4f4; }
+  width: 100%;
+  background: #202020; }
+  #price .price-heading {
+    padding: 2rem 0; }
+    #price .price-heading h2 {
+      color: #f4f4f4;
+      font-size: 3rem;
+      font-weight: 500;
+      text-transform: uppercase; }
+      #price .price-heading h2 span {
+        color: #ffc046;
+        font-weight: 700; }
+    #price .price-heading p {
+      color: #f4f4f4;
+      font-size: 1.1rem;
+      padding: 0.3rem 0; }
+  #price .price-wrapper {
+    display: flex;
+    justify-content: center; }
+    #price .price-wrapper ol.categories {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      #price .price-wrapper ol.categories li.category h3 {
+        color: #f4f4f4;
+        text-transform: uppercase; }
 
 #main-footer {
   background: #101010; }
