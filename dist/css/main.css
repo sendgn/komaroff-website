@@ -171,19 +171,12 @@ header#showcase {
   header#showcase #slider,
   header#showcase .slide-container {
     width: 100%;
-    height: 92.5vh; }
+    height: 91.5vh; }
   header#showcase .slide-container {
     position: relative; }
   header#showcase .wrap {
     position: relative;
     top: 5rem; }
-    header#showcase .wrap .line {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 0.5rem;
-      background: #101010;
-      z-index: 1; }
     header#showcase .wrap .arrow {
       cursor: pointer;
       position: absolute;
@@ -310,74 +303,75 @@ header#showcase {
     justify-content: space-between;
     max-width: 1268px; }
     #benefits .wrap ul {
-      padding: 3rem 0; }
+      flex: 1;
+      padding: 3rem 0;
+      font-weight: 500; }
       #benefits .wrap ul li {
         padding: 0.4rem 0; }
         #benefits .wrap ul li span {
-          color: #101010;
+          color: #b71c1c;
           font-weight: 700;
+          font-size: 2.5rem;
           margin-right: 0.5rem; }
-    #benefits .wrap .micro-gallery img {
-      width: 7rem; }
+    #benefits .wrap .micro-gallery {
+      flex: 1;
+      display: flex;
+      justify-content: space-between; }
+      #benefits .wrap .micro-gallery .image {
+        box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.2); }
+        #benefits .wrap .micro-gallery .image img {
+          height: 100%;
+          width: 6.5rem;
+          transition: all 0.1s ease; }
+          #benefits .wrap .micro-gallery .image img:hover {
+            transform: scale(1.2);
+            cursor: zoom-in; }
 
 #gallery {
-  display: block;
   width: 100%;
-  margin: 0 auto;
-  background-color: #101010; }
-  #gallery .gallery-heading {
+  background: url("../img/showcase.jpg") no-repeat center top/cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 1; }
+  #gallery::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 8rem;
-    background: #101010; }
-    #gallery .gallery-heading h2 {
-      color: #f4f4f4;
-      font-size: 3rem;
-      font-weight: 500;
-      padding-top: 2rem; }
-  #gallery .photos {
-    display: grid;
-    grid-template-areas: "img-1 img-2 img-3 img-4 img-5" "img-13 img-6 img-7 img-8 img-14" "img-13 img-9 img-10 img-11 img-14" "img-12 img-15 img-16 img-17 img-18"; }
-    #gallery .photos div {
-      width: 100%; }
-      #gallery .photos div > img {
-        height: 100%;
-        width: 100%; }
-      #gallery .photos div:first-child {
-        grid-area: img-1; }
-      #gallery .photos div:nth-child(2) {
-        grid-area: img-2; }
-      #gallery .photos div:nth-child(3) {
-        grid-area: img-3; }
-      #gallery .photos div:nth-child(4) {
-        grid-area: img-4; }
-      #gallery .photos div:nth-child(5) {
-        grid-area: img-5; }
-      #gallery .photos div:nth-child(6) {
-        grid-area: img-6; }
-      #gallery .photos div:nth-child(7) {
-        grid-area: img-7; }
-      #gallery .photos div:nth-child(8) {
-        grid-area: img-8; }
-      #gallery .photos div:nth-child(9) {
-        grid-area: img-9; }
-      #gallery .photos div:nth-child(10) {
-        grid-area: img-10; }
-      #gallery .photos div:nth-child(11) {
-        grid-area: img-11; }
-      #gallery .photos div:nth-child(12) {
-        grid-area: img-12; }
-      #gallery .photos div:nth-child(13) {
-        grid-area: img-13; }
-      #gallery .photos div:nth-child(14) {
-        grid-area: img-14; }
-      #gallery .photos div:nth-child(15) {
-        grid-area: img-15; }
-      #gallery .photos div:nth-child(16) {
-        grid-area: img-16; }
-      #gallery .photos div:nth-child(17) {
-        grid-area: img-17; }
-      #gallery .photos div:nth-child(18) {
-        grid-area: img-18; }
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); }
+  #gallery .wrap {
+    z-index: 2;
+    position: relative; }
+    #gallery .wrap .gallery-heading {
+      width: 100%;
+      height: 8rem;
+      background: #202020; }
+      #gallery .wrap .gallery-heading h2 {
+        color: #f4f4f4;
+        font-size: 3rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        padding-top: 2rem; }
+      #gallery .wrap .gallery-heading span {
+        color: #ffc046;
+        font-weight: 700; }
+    #gallery .wrap .photos {
+      max-width: 1266px;
+      margin: auto;
+      overflow: hidden;
+      padding: 5px 0; }
+      #gallery .wrap .photos .imgs {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px; }
+        #gallery .wrap .photos .imgs img {
+          width: 100%;
+          transition: all 0.3s ease; }
+          #gallery .wrap .photos .imgs img:hover {
+            transform: scale(1.1);
+            cursor: zoom-in; }
 
 #price {
   height: 50vh;
