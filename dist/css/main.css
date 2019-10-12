@@ -408,7 +408,7 @@ header#showcase {
       #price .price-wrapper .price-block .category {
         margin-bottom: 20px;
         background: #f4f4f4;
-        transition: all 0.3s ease; }
+        transition: all 0.45s ease; }
         #price .price-wrapper .price-block .category:hover {
           cursor: pointer;
           box-shadow: 0 0 8px rgba(255, 192, 70, 0.7); }
@@ -420,10 +420,8 @@ header#showcase {
           position: relative;
           font-size: 1.5rem;
           padding: 1.5rem 2rem;
-          font-weight: 400;
-          transition: all 0.3s ease; }
-          #price .price-wrapper .price-block .category .click-category::before {
-            content: "";
+          font-weight: 400; }
+          #price .price-wrapper .price-block .category .click-category .expand-icon {
             position: absolute;
             top: 2rem;
             right: 2rem;
@@ -432,8 +430,21 @@ header#showcase {
             width: 1.2rem;
             color: #202020; }
         #price .price-wrapper .price-block .category .all-category {
-          max-height: 700px;
-          overflow: auto; }
+          overflow: auto;
+          animation-name: expand;
+          animation-duration: 1.2s; }
+
+@keyframes expand {
+  from {
+    max-height: 0; }
+  to {
+    max-height: 700px; } }
+
+@keyframes shrink {
+  from {
+    max-height: 700px; }
+  to {
+    max-height: 0; } }
 
 #main-footer {
   background: #101010; }

@@ -483,7 +483,7 @@ header#showcase {
       .category {
         margin-bottom: 20px;
         background: $light-color;
-        transition: all 0.3s ease;
+        transition: all 0.45s ease;
 
         &:hover {
           cursor: pointer;
@@ -504,10 +504,8 @@ header#showcase {
           font-size: 1.5rem;
           padding: 1.5rem 2rem;
           font-weight: 400;
-          transition: all 0.3s ease;
 
-          &::before {
-            content: "";
+          .expand-icon {
             position: absolute;
             top: 2rem;
             right: 2rem;
@@ -519,9 +517,29 @@ header#showcase {
         }
 
         .all-category {
-          max-height: 700px;
           overflow: auto;
+
+          animation-name: expand;
+          animation-duration: 1.2s;
         }
+
+        @keyframes expand {
+          from {
+            max-height: 0;
+          }
+          to {
+            max-height: 700px;
+          }
+        }
+
+        // @keyframes shrink {
+        //   from {
+        //     max-height: 700px;
+        //   }
+        //   to {
+        //     max-height: 0;
+        //   }
+        // }
       }
     }
   }

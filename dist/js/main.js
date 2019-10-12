@@ -18,15 +18,20 @@ window.addEventListener("scroll", function() {
 const categories = document.getElementsByClassName("click-category");
 
 // console.log(categories);
-
 for (let i = 0; i < 5; i++) {
   categories[i].addEventListener("click", function() {
-    const allBlock = this.nextElementSibling;
+    const allCategory = this.nextElementSibling;
+    const expandIcon = this.children[0];
 
-    if (allBlock.style.display === "none") {
-      allBlock.style.display = "block";
+    if (allCategory.style.display === "none") {
+      allCategory.style.display = "block";
+      expandIcon.style.background =
+        'url("./img/subtract.png") no-repeat center center/cover';
     } else {
-      allBlock.style.display = "none";
+      allCategory.style.display = "none";
+      expandIcon.style.background =
+        'url("./img/plus.png") no-repeat center center/cover';
+      // allCategory.style.animationName = "shrink";
     }
   });
 }
