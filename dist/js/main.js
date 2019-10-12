@@ -14,3 +14,19 @@ window.addEventListener("scroll", function() {
     // this.document.querySelector(".logo img").style.height = "45px";
   }
 });
+
+const categories = document.getElementsByClassName("click-category");
+
+// console.log(categories);
+
+for (let i = 0; i < 5; i++) {
+  categories[i].addEventListener("click", function() {
+    const allBlock = this.nextElementSibling;
+
+    if (allBlock.style.display === "none") {
+      allBlock.style.display = "block";
+    } else {
+      allBlock.style.display = "none";
+    }
+  });
+}

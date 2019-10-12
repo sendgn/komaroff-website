@@ -449,10 +449,10 @@ header#showcase {
 // Price-list
 #price {
   width: 100%;
-  background: $dark-color;
 
   .price-heading {
     padding: 2rem 0;
+    background: $dark-color;
 
     h2 {
       color: $light-color;
@@ -474,16 +474,53 @@ header#showcase {
   }
 
   .price-wrapper {
-    display: flex;
-    justify-content: center;
-    ol.categories {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      li.category {
-        h3 {
-          color: $light-color;
-          text-transform: uppercase;
+    max-width: 768px;
+    margin: 0 auto;
+
+    .price-block {
+      color: $primary-color;
+
+      .category {
+        margin-bottom: 20px;
+        background: $light-color;
+        transition: all 0.3s ease;
+
+        &:hover {
+          cursor: pointer;
+
+          box-shadow: 0 0 8px rgba(255, 192, 70, 0.7);
+        }
+
+        ul {
+          padding: 0 2rem 1.5rem 2rem;
+
+          li {
+            padding-bottom: 0.5rem;
+          }
+        }
+
+        .click-category {
+          position: relative;
+          font-size: 1.5rem;
+          padding: 1.5rem 2rem;
+          font-weight: 400;
+          transition: all 0.3s ease;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: url("../img/plus.png") no-repeat center center/cover;
+            height: 1.2rem;
+            width: 1.2rem;
+            color: $dark-color;
+          }
+        }
+
+        .all-category {
+          max-height: 700px;
+          overflow: auto;
         }
       }
     }

@@ -384,10 +384,10 @@ header#showcase {
             transition: all 0.3s ease; }
 
 #price {
-  width: 100%;
-  background: #202020; }
+  width: 100%; }
   #price .price-heading {
-    padding: 2rem 0; }
+    padding: 2rem 0;
+    background: #202020; }
     #price .price-heading h2 {
       color: #f4f4f4;
       font-size: 3rem;
@@ -401,15 +401,39 @@ header#showcase {
       font-size: 1.1rem;
       padding: 0.3rem 0; }
   #price .price-wrapper {
-    display: flex;
-    justify-content: center; }
-    #price .price-wrapper ol.categories {
-      display: flex;
-      flex-direction: column;
-      justify-content: center; }
-      #price .price-wrapper ol.categories li.category h3 {
-        color: #f4f4f4;
-        text-transform: uppercase; }
+    max-width: 768px;
+    margin: 0 auto; }
+    #price .price-wrapper .price-block {
+      color: #101010; }
+      #price .price-wrapper .price-block .category {
+        margin-bottom: 20px;
+        background: #f4f4f4;
+        transition: all 0.3s ease; }
+        #price .price-wrapper .price-block .category:hover {
+          cursor: pointer;
+          box-shadow: 0 0 8px rgba(255, 192, 70, 0.7); }
+        #price .price-wrapper .price-block .category ul {
+          padding: 0 2rem 1.5rem 2rem; }
+          #price .price-wrapper .price-block .category ul li {
+            padding-bottom: 0.5rem; }
+        #price .price-wrapper .price-block .category .click-category {
+          position: relative;
+          font-size: 1.5rem;
+          padding: 1.5rem 2rem;
+          font-weight: 400;
+          transition: all 0.3s ease; }
+          #price .price-wrapper .price-block .category .click-category::before {
+            content: "";
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: url("../img/plus.png") no-repeat center center/cover;
+            height: 1.2rem;
+            width: 1.2rem;
+            color: #202020; }
+        #price .price-wrapper .price-block .category .all-category {
+          max-height: 700px;
+          overflow: auto; }
 
 #main-footer {
   background: #101010; }
