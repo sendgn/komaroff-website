@@ -15,23 +15,24 @@ window.addEventListener("scroll", function() {
   }
 });
 
-const categories = document.getElementsByClassName("click-category");
+const coll = document.getElementsByClassName("collapsible");
 
-// console.log(categories);
-for (let i = 0; i < 5; i++) {
-  categories[i].addEventListener("click", function() {
-    const allCategory = this.nextElementSibling;
+// console.log(coll);
+for (let i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    const content = this.nextElementSibling;
     const expandIcon = this.children[0];
 
-    if (allCategory.style.display === "none") {
-      allCategory.style.display = "block";
-      expandIcon.style.background =
-        'url("./img/subtract.png") no-repeat center center/cover';
-    } else {
-      allCategory.style.display = "none";
+    if (content.style.maxHeight) {
+      console.log(content.style.maxHeight);
+      content.style.maxHeight = null;
       expandIcon.style.background =
         'url("./img/plus.png") no-repeat center center/cover';
-      // allCategory.style.animationName = "shrink";
+    } else {
+      content.style.maxHeight = "445px";
+      expandIcon.style.background =
+        'url("./img/subtract.png") no-repeat center center/cover';
     }
   });
 }

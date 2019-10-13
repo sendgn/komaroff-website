@@ -254,7 +254,7 @@ header#showcase {
           header#showcase .wrap #slider .slide-2 .slide-container::before {
             background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); }
           header#showcase .wrap #slider .slide-2 .slide-container .slide-content {
-            width: 35%;
+            width: 39%;
             height: 50%;
             border-left: 5px solid #ffc046;
             margin-left: 17%;
@@ -348,7 +348,6 @@ header#showcase {
     #gallery .gallery-wrap .gallery-heading {
       width: 100%;
       background: #202020;
-      margin-top: 5px;
       padding: 2rem 0; }
       #gallery .gallery-wrap .gallery-heading h2 {
         color: #f4f4f4;
@@ -408,20 +407,33 @@ header#showcase {
       #price .price-wrapper .price-block .category {
         margin-bottom: 20px;
         background: #f4f4f4;
-        transition: all 0.45s ease; }
+        transition: all 0.45s ease;
+        /* Scrollbar */
+        /* Track */
+        /* Handle */ }
         #price .price-wrapper .price-block .category:hover {
           cursor: pointer;
           box-shadow: 0 0 8px rgba(255, 192, 70, 0.7); }
+        #price .price-wrapper .price-block .category ::-webkit-scrollbar {
+          width: 4px; }
+        #price .price-wrapper .price-block .category ::-webkit-scrollbar-track {
+          width: 4px;
+          border-right: 1px solid #333; }
+        #price .price-wrapper .price-block .category ::-webkit-scrollbar-thumb {
+          background: #333; }
         #price .price-wrapper .price-block .category ul {
           padding: 0 2rem 1.5rem 2rem; }
+          #price .price-wrapper .price-block .category ul:hover {
+            cursor: default; }
           #price .price-wrapper .price-block .category ul li {
-            padding-bottom: 0.5rem; }
-        #price .price-wrapper .price-block .category .click-category {
+            padding: 0.3rem 0;
+            line-height: 1.5; }
+        #price .price-wrapper .price-block .category .collapsible {
           position: relative;
           font-size: 1.5rem;
           padding: 1.5rem 2rem;
           font-weight: 400; }
-          #price .price-wrapper .price-block .category .click-category .expand-icon {
+          #price .price-wrapper .price-block .category .collapsible .expand-icon {
             position: absolute;
             top: 2rem;
             right: 2rem;
@@ -429,22 +441,10 @@ header#showcase {
             height: 1.2rem;
             width: 1.2rem;
             color: #202020; }
-        #price .price-wrapper .price-block .category .all-category {
+        #price .price-wrapper .price-block .category .content {
           overflow: auto;
-          animation-name: expand;
-          animation-duration: 1.2s; }
-
-@keyframes expand {
-  from {
-    max-height: 0; }
-  to {
-    max-height: 700px; } }
-
-@keyframes shrink {
-  from {
-    max-height: 700px; }
-  to {
-    max-height: 0; } }
+          max-height: 0;
+          transition: max-height 0.5s ease-out; }
 
 #main-footer {
   background: #101010; }

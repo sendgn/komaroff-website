@@ -245,7 +245,7 @@ header#showcase {
             }
 
             .slide-content {
-              width: 35%;
+              width: 39%;
               height: 50%;
               border-left: 5px solid $secondary-color;
               margin-left: 17%;
@@ -392,7 +392,7 @@ header#showcase {
     .gallery-heading {
       width: 100%;
       background: $dark-color;
-      margin-top: 5px;
+      // margin-top: 5px;
       padding: 2rem 0;
 
       h2 {
@@ -487,19 +487,41 @@ header#showcase {
 
         &:hover {
           cursor: pointer;
-
           box-shadow: 0 0 8px rgba(255, 192, 70, 0.7);
+
+          // TODO: text effects on hover
+          .collapsible {
+          }
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+          width: 4px;
+        }
+        /* Track */
+        ::-webkit-scrollbar-track {
+          width: 4px;
+          border-right: 1px solid #333;
+        }
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+          background: #333;
         }
 
         ul {
           padding: 0 2rem 1.5rem 2rem;
 
+          &:hover {
+            cursor: default;
+          }
+
           li {
-            padding-bottom: 0.5rem;
+            padding: 0.3rem 0;
+            line-height: 1.5;
           }
         }
 
-        .click-category {
+        .collapsible {
           position: relative;
           font-size: 1.5rem;
           padding: 1.5rem 2rem;
@@ -516,30 +538,11 @@ header#showcase {
           }
         }
 
-        .all-category {
+        .content {
           overflow: auto;
-
-          animation-name: expand;
-          animation-duration: 1.2s;
+          max-height: 0;
+          transition: max-height 0.5s ease-out;
         }
-
-        @keyframes expand {
-          from {
-            max-height: 0;
-          }
-          to {
-            max-height: 700px;
-          }
-        }
-
-        // @keyframes shrink {
-        //   from {
-        //     max-height: 700px;
-        //   }
-        //   to {
-        //     max-height: 0;
-        //   }
-        // }
       }
     }
   }
