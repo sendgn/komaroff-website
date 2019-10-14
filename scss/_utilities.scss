@@ -112,3 +112,40 @@
 .bg-light {
   background-color: $light-color;
 }
+
+.btn-primary {
+  background: $primary-color;
+  padding: 1.2rem 1.8rem;
+  border: none;
+  color: $light-color;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btn-secondary {
+  background: $secondary-color;
+  padding: 1.2rem 1.8rem;
+  border: none;
+  color: $primary-color;
+  font-size: 1rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btn-light {
+  background: $light-color;
+  padding: 1.2rem 1.8rem;
+  border: none;
+  color: $primary-color;
+  font-size: 1rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

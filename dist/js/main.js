@@ -30,7 +30,7 @@ for (let i = 0; i < coll.length; i++) {
       expandIcon.style.background =
         'url("./img/plus.png") no-repeat center center/cover';
     } else {
-      content.style.maxHeight = "445px";
+      content.style.maxHeight = "350px";
       expandIcon.style.background =
         'url("./img/subtract.png") no-repeat center center/cover';
     }

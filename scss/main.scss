@@ -316,10 +316,9 @@ header#showcase {
 // Photo Gallery
 #gallery {
   width: 100%;
-  background: url("../img/showcase.jpg") no-repeat center top/cover;
+  background: url("../img/showcase.jpg") no-repeat center center/cover;
   background-attachment: fixed;
   position: relative;
-  padding-top: 5px;
   z-index: 1;
 
   // Benefits section
@@ -392,7 +391,6 @@ header#showcase {
     .gallery-heading {
       width: 100%;
       background: $dark-color;
-      // margin-top: 5px;
       padding: 2rem 0;
 
       h2 {
@@ -419,12 +417,12 @@ header#showcase {
       max-width: 1266px;
       margin: auto;
       overflow: hidden;
-      padding: 5px 0;
+      padding: 0.5rem 0;
 
       .imgs {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 5px;
+        gap: 0.5rem;
 
         .img-wrapper {
           overflow: hidden;
@@ -449,6 +447,7 @@ header#showcase {
 // Price-list
 #price {
   width: 100%;
+  padding-bottom: 3rem;
 
   .price-heading {
     padding: 2rem 0;
@@ -489,7 +488,7 @@ header#showcase {
           cursor: pointer;
           box-shadow: 0 0 8px rgba(255, 192, 70, 0.7);
 
-          // TODO: text effects on hover
+          // TODO: make text effects on hover
           .collapsible {
           }
         }
@@ -542,6 +541,79 @@ header#showcase {
           overflow: auto;
           max-height: 0;
           transition: max-height 0.5s ease-out;
+        }
+      }
+    }
+  }
+}
+
+// Contacts
+#contacts {
+  width: 100%;
+  background: $secondary-color;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 1;
+
+  .contacts-heading {
+    padding: 3.5rem 0 0 0;
+    position: relative;
+    color: $dark-color;
+
+    h3 {
+      font-size: 2.4rem;
+      font-weight: 600;
+    }
+
+    .bottom-line {
+      margin: 1.5rem auto;
+      width: 15%;
+      height: 3px;
+      background: $primary-color;
+    }
+  }
+
+  .container {
+    max-width: 1268px;
+    padding-bottom: 3rem;
+
+    form {
+      padding-top: 1rem;
+      position: relative;
+
+      .text-fields {
+        display: grid;
+        grid-template-areas:
+          "name"
+          "email"
+          "message";
+        gap: 1.2rem;
+        margin-bottom: 1.2rem;
+
+        //  Grid Areas
+        .name-input {
+          grid-area: name;
+        }
+
+        .email-input {
+          grid-area: email;
+        }
+
+        .message-input {
+          grid-area: message;
+          height: 100px;
+        }
+
+        .text-input {
+          background: $dark-color;
+          border: none;
+          font-family: "Montserrat", sans-serif;
+          font-size: 0.9rem;
+          padding: 0.5rem 1rem;
+
+          &::placeholder {
+            color: $light-color;
+          }
         }
       }
     }

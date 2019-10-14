@@ -90,6 +90,34 @@
 .bg-light {
   background-color: #f4f4f4; }
 
+.btn-primary {
+  background: #101010;
+  padding: 1.2rem 1.8rem;
+  border: none;
+  color: #f4f4f4;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif; }
+  .btn-primary:hover {
+    cursor: pointer; }
+
+.btn-secondary {
+  background: #ffc046;
+  padding: 1.2rem 1.8rem;
+  border: none;
+  color: #101010;
+  font-size: 1rem; }
+  .btn-secondary:hover {
+    cursor: pointer; }
+
+.btn-light {
+  background: #f4f4f4;
+  padding: 1.2rem 1.8rem;
+  border: none;
+  color: #101010;
+  font-size: 1rem; }
+  .btn-light:hover {
+    cursor: pointer; }
+
 * {
   margin: 0;
   padding: 0;
@@ -294,10 +322,9 @@ header#showcase {
 
 #gallery {
   width: 100%;
-  background: url("../img/showcase.jpg") no-repeat center top/cover;
+  background: url("../img/showcase.jpg") no-repeat center center/cover;
   background-attachment: fixed;
   position: relative;
-  padding-top: 5px;
   z-index: 1; }
   #gallery #benefits {
     position: relative;
@@ -366,11 +393,11 @@ header#showcase {
       max-width: 1266px;
       margin: auto;
       overflow: hidden;
-      padding: 5px 0; }
+      padding: 0.5rem 0; }
       #gallery .gallery-wrap .photos .imgs {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 5px; }
+        gap: 0.5rem; }
         #gallery .gallery-wrap .photos .imgs .img-wrapper {
           overflow: hidden; }
           #gallery .gallery-wrap .photos .imgs .img-wrapper:hover img,
@@ -383,7 +410,8 @@ header#showcase {
             transition: all 0.3s ease; }
 
 #price {
-  width: 100%; }
+  width: 100%;
+  padding-bottom: 3rem; }
   #price .price-heading {
     padding: 2rem 0;
     background: #202020; }
@@ -445,6 +473,51 @@ header#showcase {
           overflow: auto;
           max-height: 0;
           transition: max-height 0.5s ease-out; }
+
+#contacts {
+  width: 100%;
+  background: #ffc046;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 1; }
+  #contacts .contacts-heading {
+    padding: 3.5rem 0 0 0;
+    position: relative;
+    color: #202020; }
+    #contacts .contacts-heading h3 {
+      font-size: 2.4rem;
+      font-weight: 600; }
+    #contacts .contacts-heading .bottom-line {
+      margin: 1.5rem auto;
+      width: 15%;
+      height: 3px;
+      background: #101010; }
+  #contacts .container {
+    max-width: 1268px;
+    padding-bottom: 3rem; }
+    #contacts .container form {
+      padding-top: 1rem;
+      position: relative; }
+      #contacts .container form .text-fields {
+        display: grid;
+        grid-template-areas: "name" "email" "message";
+        gap: 1.2rem;
+        margin-bottom: 1.2rem; }
+        #contacts .container form .text-fields .name-input {
+          grid-area: name; }
+        #contacts .container form .text-fields .email-input {
+          grid-area: email; }
+        #contacts .container form .text-fields .message-input {
+          grid-area: message;
+          height: 100px; }
+        #contacts .container form .text-fields .text-input {
+          background: #202020;
+          border: none;
+          font-family: "Montserrat", sans-serif;
+          font-size: 0.9rem;
+          padding: 0.5rem 1rem; }
+          #contacts .container form .text-fields .text-input::placeholder {
+            color: #f4f4f4; }
 
 #main-footer {
   background: #101010; }
