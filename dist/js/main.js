@@ -14,14 +14,14 @@ let mainNavLinks = document.querySelectorAll("nav ul li a");
 
 window.addEventListener("scroll", event => {
   let fromTop = window.scrollY;
-  const navOffset = 81;
+  const navHeight = 81;
 
   mainNavLinks.forEach(link => {
     let section = document.querySelector(link.hash);
 
     if (
-      section.offsetTop - navOffset <= fromTop &&
-      section.offsetTop + section.offsetHeight - navOffset > fromTop
+      section.offsetTop - navHeight <= fromTop &&
+      section.offsetTop + section.offsetHeight - navHeight > fromTop
     ) {
       link.classList.add("current");
     } else {
@@ -44,6 +44,25 @@ mainNavLinks.forEach(link => {
       behavior: "smooth"
     });
   });
+});
+
+/* Fancybox customizing */
+$('[data-fancybox="gallery"]').fancybox({
+  buttons: [
+    //"zoom",
+    //"share",
+    "slideShow",
+    //"fullScreen",
+    //"download",
+    //"thumbs",
+    "close"
+  ],
+  animationEffect: "zoom-in-out",
+  transitionEffect: "zoom-in-out",
+  clickContent: function(current, event) {
+    return current.type === "image" ? "next" : false;
+  },
+  loop: true
 });
 
 /* Up button */
