@@ -109,6 +109,16 @@
   .btn-secondary:hover {
     cursor: pointer; }
 
+.btn-dark {
+  background: #202020;
+  padding: 1.2rem 1.8rem;
+  border: none;
+  color: #f4f4f4;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif; }
+  .btn-dark:hover {
+    cursor: pointer; }
+
 .btn-light {
   background: #f4f4f4;
   padding: 1.2rem 1.8rem;
@@ -117,6 +127,17 @@
   font-size: 1rem; }
   .btn-light:hover {
     cursor: pointer; }
+
+.bottom-line {
+  margin: 1.5rem auto;
+  width: 15%;
+  height: 3px; }
+  .bottom-line-primary {
+    background: #101010; }
+  .bottom-line-secondary {
+    background: #ffc046; }
+    .bottom-line-secondary-short {
+      width: 7%; }
 
 * {
   margin: 0;
@@ -128,6 +149,9 @@ body {
   height: 100%;
   background: #202020;
   font-family: "Montserrat", sans-serif; }
+
+body {
+  position: relative; }
 
 a {
   text-decoration: none;
@@ -194,18 +218,18 @@ ul {
         #navbar .navbar-content li a:hover {
           border-color: #f4f4f4; }
 
-header#showcase {
+#showcase {
   height: 100%; }
-  header#showcase #slider,
-  header#showcase .slide-container {
+  #showcase #slider,
+  #showcase .slide-container {
     width: 100%;
     height: 91.5vh; }
-  header#showcase .slide-container {
+  #showcase .slide-container {
     position: relative; }
-  header#showcase .wrap {
+  #showcase .wrap {
     position: relative;
     top: 5rem; }
-    header#showcase .wrap .arrow {
+    #showcase .wrap .arrow {
       cursor: pointer;
       position: absolute;
       top: 50%;
@@ -214,43 +238,43 @@ header#showcase {
       color: #ffc046;
       z-index: 2;
       transition: all 0.3s ease-in-out; }
-      header#showcase .wrap .arrow:hover {
+      #showcase .wrap .arrow:hover {
         color: #f4f4f4; }
-      header#showcase .wrap .arrow-left {
+      #showcase .wrap .arrow-left {
         left: 0;
         margin-left: 30px; }
-      header#showcase .wrap .arrow-right {
+      #showcase .wrap .arrow-right {
         right: 0;
         margin-right: 30px; }
-    header#showcase .wrap #slider .slide {
+    #showcase .wrap #slider .slide {
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       text-shadow: 0 0 2px #101010; }
-      header#showcase .wrap #slider .slide .slide-container {
+      #showcase .wrap #slider .slide .slide-container {
         text-align: center;
         position: relative;
         z-index: 1; }
-        header#showcase .wrap #slider .slide .slide-container::before {
+        #showcase .wrap #slider .slide .slide-container::before {
           content: "";
           position: absolute;
           top: 0;
           left: 0;
           width: 100%;
           height: 100%; }
-        header#showcase .wrap #slider .slide .slide-container .slide-content {
+        #showcase .wrap #slider .slide .slide-container .slide-content {
           position: absolute;
           color: #f4f4f4;
           height: 100%;
           z-index: 2; }
-      header#showcase .wrap #slider .slide-1 {
+      #showcase .wrap #slider .slide-1 {
         background-image: url("../img/slider/slide1.jpg"); }
-        header#showcase .wrap #slider .slide-1 .slide-container {
+        #showcase .wrap #slider .slide-1 .slide-container {
           display: flex;
           align-items: center; }
-          header#showcase .wrap #slider .slide-1 .slide-container::before {
+          #showcase .wrap #slider .slide-1 .slide-container::before {
             background-image: linear-gradient(90deg, black, rgba(0, 0, 0, 0)); }
-          header#showcase .wrap #slider .slide-1 .slide-container .slide-content {
+          #showcase .wrap #slider .slide-1 .slide-container .slide-content {
             display: flex;
             align-items: center;
             text-align: left;
@@ -259,29 +283,29 @@ header#showcase {
             margin-left: 17%;
             border-left: 5px solid #ffc046;
             padding-left: 3.5rem; }
-            header#showcase .wrap #slider .slide-1 .slide-container .slide-content p {
+            #showcase .wrap #slider .slide-1 .slide-container .slide-content p {
               font-weight: 600;
               margin-bottom: 1rem;
               padding-top: 1.5rem;
               padding-bottom: 1.5rem; }
-            header#showcase .wrap #slider .slide-1 .slide-container .slide-content h2 {
+            #showcase .wrap #slider .slide-1 .slide-container .slide-content h2 {
               text-transform: uppercase;
               margin-left: -7px;
               font-size: 4.2rem;
               font-weight: 700;
               padding-bottom: 1rem;
               border-bottom: 5px solid #ffc046; }
-            header#showcase .wrap #slider .slide-1 .slide-container .slide-content span {
+            #showcase .wrap #slider .slide-1 .slide-container .slide-content span {
               display: block;
               padding-bottom: 0.5rem; }
-      header#showcase .wrap #slider .slide-2 {
+      #showcase .wrap #slider .slide-2 {
         background-image: url("../img/slider/slide2.jpg"); }
-        header#showcase .wrap #slider .slide-2 .slide-container {
+        #showcase .wrap #slider .slide-2 .slide-container {
           display: flex;
           align-items: center; }
-          header#showcase .wrap #slider .slide-2 .slide-container::before {
+          #showcase .wrap #slider .slide-2 .slide-container::before {
             background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); }
-          header#showcase .wrap #slider .slide-2 .slide-container .slide-content {
+          #showcase .wrap #slider .slide-2 .slide-container .slide-content {
             width: 39%;
             height: 50%;
             border-left: 5px solid #ffc046;
@@ -292,29 +316,29 @@ header#showcase {
             padding-left: 3.5rem;
             text-align: left;
             font-weight: 600; }
-            header#showcase .wrap #slider .slide-2 .slide-container .slide-content h3 {
+            #showcase .wrap #slider .slide-2 .slide-container .slide-content h3 {
               margin-left: -6px;
               padding-bottom: 0.7rem;
               border-bottom: 5px solid #ffc046; }
-            header#showcase .wrap #slider .slide-2 .slide-container .slide-content ul {
+            #showcase .wrap #slider .slide-2 .slide-container .slide-content ul {
               margin-top: 0.9rem;
               font-size: 3rem; }
-              header#showcase .wrap #slider .slide-2 .slide-container .slide-content ul li {
+              #showcase .wrap #slider .slide-2 .slide-container .slide-content ul li {
                 margin-bottom: 0.6rem; }
-      header#showcase .wrap #slider .slide-3 {
+      #showcase .wrap #slider .slide-3 {
         background-image: url("../img/slider/slide3.jpg"); }
-        header#showcase .wrap #slider .slide-3 .slide-container {
+        #showcase .wrap #slider .slide-3 .slide-container {
           display: flex;
           align-items: center;
           justify-content: center; }
-          header#showcase .wrap #slider .slide-3 .slide-container::before {
+          #showcase .wrap #slider .slide-3 .slide-container::before {
             background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)); }
-          header#showcase .wrap #slider .slide-3 .slide-container .slide-content {
+          #showcase .wrap #slider .slide-3 .slide-container .slide-content {
             display: flex;
             align-items: center; }
-            header#showcase .wrap #slider .slide-3 .slide-container .slide-content span {
+            #showcase .wrap #slider .slide-3 .slide-container .slide-content span {
               border-bottom: 5px solid #ffc046; }
-      header#showcase .wrap #slider .slide .text-bottom {
+      #showcase .wrap #slider .slide .text-bottom {
         height: 5rem;
         background: #101010;
         font-size: 4rem;
@@ -322,45 +346,10 @@ header#showcase {
 
 #gallery {
   width: 100%;
-  background: url("../img/showcase.jpg") no-repeat center center/cover;
+  background: url("../img/showcase.jpg") no-repeat right top/cover;
   background-attachment: fixed;
   position: relative;
   z-index: 1; }
-  #gallery #benefits {
-    position: relative;
-    background: #101010;
-    color: #f4f4f4;
-    font-size: 2rem; }
-    #gallery #benefits .benefits-wrap {
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      max-width: 1268px; }
-      #gallery #benefits .benefits-wrap ul {
-        flex: 1;
-        padding: 3rem 0;
-        font-weight: 500; }
-        #gallery #benefits .benefits-wrap ul li {
-          padding: 0.4rem 0; }
-          #gallery #benefits .benefits-wrap ul li span {
-            color: #ffc046;
-            font-weight: 700;
-            font-size: 2.5rem;
-            margin-right: 0.5rem; }
-      #gallery #benefits .benefits-wrap .micro-gallery {
-        flex: 1;
-        display: flex;
-        justify-content: space-between; }
-        #gallery #benefits .benefits-wrap .micro-gallery .image {
-          box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.2); }
-          #gallery #benefits .benefits-wrap .micro-gallery .image img {
-            height: 100%;
-            width: 6.5rem;
-            transition: all 0.1s ease; }
-            #gallery #benefits .benefits-wrap .micro-gallery .image img:hover {
-              transform: scale(1.2);
-              cursor: zoom-in; }
   #gallery::before {
     content: "";
     position: absolute;
@@ -409,59 +398,59 @@ header#showcase {
             display: block;
             transition: all 0.3s ease; }
 
-#price {
+#services {
   width: 100%;
   padding-bottom: 3rem; }
-  #price .price-heading {
+  #services .services-heading {
     padding: 2rem 0;
     background: #202020; }
-    #price .price-heading h2 {
+    #services .services-heading h2 {
       color: #f4f4f4;
       font-size: 3rem;
       font-weight: 500;
       text-transform: uppercase; }
-      #price .price-heading h2 span {
+      #services .services-heading h2 span {
         color: #ffc046;
         font-weight: 700; }
-    #price .price-heading p {
+    #services .services-heading p {
       color: #f4f4f4;
       font-size: 1.1rem;
       padding: 0.3rem 0; }
-  #price .price-wrapper {
+  #services .services-wrapper {
     max-width: 768px;
     margin: 0 auto; }
-    #price .price-wrapper .price-block {
+    #services .services-wrapper .services-block {
       color: #101010; }
-      #price .price-wrapper .price-block .category {
+      #services .services-wrapper .services-block .category {
         margin-bottom: 20px;
         background: #f4f4f4;
         transition: all 0.45s ease;
         /* Scrollbar */
         /* Track */
         /* Handle */ }
-        #price .price-wrapper .price-block .category:hover {
+        #services .services-wrapper .services-block .category:hover {
           cursor: pointer;
           box-shadow: 0 0 8px rgba(255, 192, 70, 0.7); }
-        #price .price-wrapper .price-block .category ::-webkit-scrollbar {
+        #services .services-wrapper .services-block .category ::-webkit-scrollbar {
           width: 4px; }
-        #price .price-wrapper .price-block .category ::-webkit-scrollbar-track {
+        #services .services-wrapper .services-block .category ::-webkit-scrollbar-track {
           width: 4px;
           border-right: 1px solid #333; }
-        #price .price-wrapper .price-block .category ::-webkit-scrollbar-thumb {
+        #services .services-wrapper .services-block .category ::-webkit-scrollbar-thumb {
           background: #333; }
-        #price .price-wrapper .price-block .category ul {
+        #services .services-wrapper .services-block .category ul {
           padding: 0 2rem 1.5rem 2rem; }
-          #price .price-wrapper .price-block .category ul:hover {
+          #services .services-wrapper .services-block .category ul:hover {
             cursor: default; }
-          #price .price-wrapper .price-block .category ul li {
+          #services .services-wrapper .services-block .category ul li {
             padding: 0.3rem 0;
             line-height: 1.5; }
-        #price .price-wrapper .price-block .category .collapsible {
+        #services .services-wrapper .services-block .category .collapsible {
           position: relative;
           font-size: 1.5rem;
           padding: 1.5rem 2rem;
           font-weight: 400; }
-          #price .price-wrapper .price-block .category .collapsible .expand-icon {
+          #services .services-wrapper .services-block .category .collapsible .expand-icon {
             position: absolute;
             top: 2rem;
             right: 2rem;
@@ -469,29 +458,21 @@ header#showcase {
             height: 1.2rem;
             width: 1.2rem;
             color: #202020; }
-        #price .price-wrapper .price-block .category .content {
+        #services .services-wrapper .services-block .category .content {
           overflow: auto;
           max-height: 0;
           transition: max-height 0.5s ease-out; }
 
 #contacts {
   width: 100%;
-  background: #ffc046;
-  background-attachment: fixed;
-  position: relative;
-  z-index: 1; }
+  background: #ffc046; }
   #contacts .contacts-heading {
-    padding: 3.5rem 0 0 0;
+    padding-top: 3rem;
     position: relative;
     color: #202020; }
     #contacts .contacts-heading h3 {
       font-size: 2.4rem;
       font-weight: 600; }
-    #contacts .contacts-heading .bottom-line {
-      margin: 1.5rem auto;
-      width: 15%;
-      height: 3px;
-      background: #101010; }
   #contacts .container {
     max-width: 1268px;
     padding-bottom: 3rem; }
@@ -518,12 +499,72 @@ header#showcase {
           padding: 0.5rem 1rem; }
           #contacts .container form .text-fields .text-input::placeholder {
             color: #f4f4f4; }
+      #contacts .container form p {
+        margin: 2rem; }
 
-#main-footer {
-  background: #101010; }
-  #main-footer .footer-content {
+#phone-section {
+  background: #202020;
+  color: #f4f4f4;
+  padding: 3rem 0; }
+  #phone-section .container {
+    position: relative; }
+  #phone-section .phone-number {
+    color: #f4f4f4;
+    font-size: 2.4rem; }
+  #phone-section h2 {
+    font-size: 2.4rem;
+    font-weight: 500; }
+  #phone-section p {
+    font-size: 1.7rem;
+    font-weight: 500; }
+
+section.up-button {
+  position: fixed;
+  bottom: 6.5rem;
+  right: 3rem;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.4s ease-in;
+  z-index: 100; }
+  section.up-button i {
     padding: 1rem;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.2s ease-out; }
+    section.up-button i:hover {
+      border-color: #ffcb62;
+      color: #ffcb62; }
+
+#footer {
+  background: #101010; }
+  #footer .footer-content {
+    position: relative;
+    padding: 2rem 0;
     text-align: center;
     color: #f4f4f4;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     word-spacing: 0.15rem; }
+    #footer .footer-content .social {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center; }
+      #footer .footer-content .social .container {
+        width: 1268px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        #footer .footer-content .social .container .logo {
+          padding-left: 0.8rem; }
+          #footer .footer-content .social .container .logo img {
+            height: 2.2rem; }
+        #footer .footer-content .social .container .icons {
+          display: flex; }
+          #footer .footer-content .social .container .icons .icon {
+            padding-right: 0.8rem; }
+            #footer .footer-content .social .container .icons .icon a:hover {
+              color: #ffc046; }

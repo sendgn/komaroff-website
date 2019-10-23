@@ -1,20 +1,49 @@
-// Sticky menu background
+/* Sticky menu background */
 window.addEventListener("scroll", function() {
   if (window.scrollY > 50) {
     this.document.querySelector("#navbar").style.background =
       "rgba(0, 0, 0, 0.7)";
-    // this.document.querySelector(".navbar-content").style.height = "4rem";
-    // this.document.querySelector(".logo h2").style.fontSize = "1.2rem";
-    // this.document.querySelector(".logo img").style.height = "40px";
   } else {
     this.document.querySelector("#navbar").style.background =
       "rgba(0, 0, 0, 0.5)";
-    // this.document.querySelector(".navbar-content").style.height = "5rem";
-    // this.document.querySelector(".logo h2").style.fontSize = "1.4rem";
-    // this.document.querySelector(".logo img").style.height = "45px";
   }
 });
 
+/* Current navigation bar element */
+let mainNavLinks = document.querySelectorAll("nav ul li a");
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach(link => {
+    let section = document.querySelector(link.hash);
+
+    if (
+      section.offsetTop <= fromTop &&
+      section.offsetTop + section.offsetHeight > fromTop
+    ) {
+      link.classList.add("current");
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+/* Up button */
+window.addEventListener("scroll", function() {
+  if (window.scrollY > 350) {
+    this.document.querySelector(".up-button").style.opacity = "1";
+
+    // TODO: change color on yellow background
+    // if (window.scrollY > 900) {
+
+    // }
+  } else {
+    this.document.querySelector(".up-button").style.opacity = "0";
+  }
+});
+
+/* Collapsible service list */
 const coll = document.getElementsByClassName("collapsible");
 
 // console.log(coll);
