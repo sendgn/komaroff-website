@@ -14,18 +14,35 @@ let mainNavLinks = document.querySelectorAll("nav ul li a");
 
 window.addEventListener("scroll", event => {
   let fromTop = window.scrollY;
+  const navOffset = 81;
 
   mainNavLinks.forEach(link => {
     let section = document.querySelector(link.hash);
 
     if (
-      section.offsetTop <= fromTop &&
-      section.offsetTop + section.offsetHeight > fromTop
+      section.offsetTop - navOffset <= fromTop &&
+      section.offsetTop + section.offsetHeight - navOffset > fromTop
     ) {
       link.classList.add("current");
     } else {
       link.classList.remove("current");
     }
+  });
+});
+
+/* Smooth scrolling */
+mainNavLinks.forEach(link => {
+  link.addEventListener("click", event => {
+    event.preventDefault();
+    let target = document.querySelector(event.target.hash);
+    const offset = 80;
+    targetPosition = target.offsetTop;
+    offsetPosition = targetPosition - offset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth"
+    });
   });
 });
 

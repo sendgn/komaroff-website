@@ -9,9 +9,13 @@
 
 html,
 body {
-  height: 100%;
+  // height: 100%;
   background: $dark-color;
   font-family: "Montserrat", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -36,7 +40,7 @@ ul {
 
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(0, 0, 0, 0.5);
-  transition: all 0.5s ease-in-out;
+  transition: background 0.5s ease-in-out;
 
   .navbar-content {
     height: 5rem;
@@ -112,7 +116,7 @@ ul {
 
 // Showcase area
 #showcase {
-  height: 100%;
+  height: 936px;
 
   // Slider
   #slider,
@@ -377,17 +381,17 @@ ul {
 
         .img-wrapper {
           overflow: hidden;
+          padding: 0;
 
-          &:hover img,
-          &:focus img {
-            transform: scale(1.2);
-            cursor: zoom-in;
+          &:hover img {
+            transform: scale(1.15);
+            cursor: pointer;
           }
 
           img {
             width: 100%;
             display: block;
-            transition: all 0.3s ease;
+            transition: all 0.3s ease-out;
           }
         }
       }
