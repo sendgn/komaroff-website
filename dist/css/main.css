@@ -167,10 +167,10 @@ ul {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 2;
+  z-index: 5;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(0, 0, 0, 0.5);
-  transition: background 0.5s ease-in-out; }
+  transition: background 0.5s ease-in; }
   #navbar .navbar-content {
     height: 5rem;
     max-width: 1268px;
@@ -182,7 +182,7 @@ ul {
       display: flex;
       align-items: center;
       color: #f4f4f4; }
-      #navbar .navbar-content .phone i {
+      #navbar .navbar-content .phone img {
         margin-right: 0.8rem; }
     #navbar .navbar-content .logo {
       display: flex;
@@ -191,12 +191,10 @@ ul {
       #navbar .navbar-content .logo h2 {
         font-weight: normal;
         font-size: 1.4rem;
-        text-transform: uppercase;
-        transition: font-size 0.5s ease-in-out; }
+        text-transform: uppercase; }
       #navbar .navbar-content .logo img {
         height: 45px;
-        margin-right: 10px;
-        transition: height 0.5s ease-in-out; }
+        margin-right: 10px; }
     #navbar .navbar-content ul {
       display: flex;
       justify-content: center;
@@ -349,7 +347,7 @@ ul {
 #gallery {
   width: 100%; }
   #gallery .gallery-wrap {
-    padding-bottom: 2rem;
+    padding-bottom: 5rem;
     background: #101010; }
     #gallery .gallery-wrap .gallery-heading {
       width: 100%;
@@ -389,7 +387,7 @@ ul {
 
 #services {
   width: 100%;
-  padding-bottom: 3rem;
+  padding-bottom: 4rem;
   background: url("../img/showcase.jpg") no-repeat right top/cover;
   background-attachment: fixed;
   position: relative;
@@ -406,7 +404,7 @@ ul {
     z-index: 2;
     position: relative; }
     #services .services-wrap .services-heading {
-      padding: 2rem 0; }
+      padding: 3rem 0; }
       #services .services-wrap .services-heading h2 {
         color: #f4f4f4;
         font-size: 3rem;
@@ -434,6 +432,10 @@ ul {
           #services .services-wrap .services-wrapper .services-block .category:hover {
             cursor: pointer;
             box-shadow: 0 0 8px rgba(255, 192, 70, 0.7); }
+            #services .services-wrap .services-wrapper .services-block .category:hover .collapsible {
+              transition: all 0.6s ease; }
+              #services .services-wrap .services-wrapper .services-block .category:hover .collapsible li:hover {
+                border-bottom: 1px solid red; }
           #services .services-wrap .services-wrapper .services-block .category ::-webkit-scrollbar {
             width: 4px; }
           #services .services-wrap .services-wrapper .services-block .category ::-webkit-scrollbar-track {
@@ -451,11 +453,11 @@ ul {
           #services .services-wrap .services-wrapper .services-block .category .collapsible {
             position: relative;
             font-size: 1.5rem;
-            padding: 1.5rem 2rem;
+            padding: 2rem 2rem;
             font-weight: 400; }
             #services .services-wrap .services-wrapper .services-block .category .collapsible .expand-icon {
               position: absolute;
-              top: 2rem;
+              top: 2.35rem;
               right: 2rem;
               background: url("../img/plus.png") no-repeat center center/cover;
               height: 1.2rem;

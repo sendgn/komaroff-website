@@ -5,7 +5,7 @@ window.addEventListener("scroll", function() {
       "rgba(0, 0, 0, 0.7)";
   } else {
     this.document.querySelector("#navbar").style.background =
-      "rgba(0, 0, 0, 0.5)";
+      "rgba(0, 0, 0, 0.35)";
   }
 });
 
@@ -31,6 +31,9 @@ window.addEventListener("scroll", event => {
 });
 
 /* Smooth scrolling */
+const nav = document.querySelector("#navbar");
+console.log(nav);
+
 mainNavLinks.forEach(link => {
   link.addEventListener("click", event => {
     event.preventDefault();
