@@ -99,6 +99,12 @@ for (let i = 0; i < coll.length; i++) {
         'url("./img/plus.png") no-repeat center center/cover';
     } else {
       content.style.maxHeight = "350px";
+      expandIcon.style.position = "absolute";
+      expandIcon.style.top = "2.35rem";
+      expandIcon.style.right = "2rem";
+      expandIcon.style.height = "1.2rem";
+      expandIcon.style.width = "1.2rem";
+      expandIcon.style.color = "$dark-color";
       expandIcon.style.background =
         'url("./img/subtract.png") no-repeat center center/cover';
     }

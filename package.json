@@ -1,16 +1,24 @@
 {
   "name": "salomachine",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "node-sass": "^4.12.0"
+    "node-sass": "^4.13.0"
   },
   "scripts": {
-    "scss": "node-sass --watch scss -o dist/css"
+    "sass": "node-sass --watch scss -o dist/css/ --recursive"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sendgn/komaroff_website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sendgn/komaroff_website/issues"
+  },
+  "homepage": "https://github.com/sendgn/komaroff_website#readme",
+  "description": ""
 }

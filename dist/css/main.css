@@ -576,3 +576,7 @@ section.up-button {
 
 .fancybox-navigation .fancybox-button {
   padding: 26px 6px 26px 16px; }
+
+@media (max-width: 1300px) {
+  .navbar-content {
+    width: 600px; } }
