@@ -181,7 +181,8 @@ ul {
     #navbar .navbar-content .phone {
       display: flex;
       align-items: center;
-      color: #f4f4f4; }
+      color: #f4f4f4;
+      font-weight: 500; }
       #navbar .navbar-content .phone img {
         margin-right: 0.8rem; }
     #navbar .navbar-content .logo {
