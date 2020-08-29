@@ -50,7 +50,9 @@ ul {
       display: flex;
       align-items: center;
       color: $light-color;
-      font-weight: 500;
+      font-weight: 600;
+      font-family: 'Yanone Kaffeesatz', sans-serif;
+      font-size: 1.3rem;
 
       img {
         margin-right: 0.8rem;
@@ -60,7 +62,7 @@ ul {
     .logo {
       display: flex;
       align-items: center;
-      color: $secondary-color;
+      color: #ffe79f;
 
       // TODO: Make logo to be fully image, i.e. get rid of h2
       h2 {
@@ -127,7 +129,7 @@ ul {
       position: absolute;
       top: 50%;
       margin-top: -20px;
-      text-shadow: 0 0 3px $primary-color;
+      text-shadow: 0 0 3px $dark-color;
       color: $secondary-color;
       z-index: 2;
       transition: all 0.3s ease-in-out;
@@ -151,6 +153,7 @@ ul {
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        // todo fix shadow
         text-shadow: 0 0 2px $primary-color;
 
         .slide-container {
@@ -178,7 +181,10 @@ ul {
 
         &-1 {
           background-image: url("../img/slider/slide1.jpg");
+          
+
           .slide-container {
+            border-bottom: 1px solid #161616;
             display: flex;
             align-items: center;
 
@@ -194,31 +200,38 @@ ul {
               display: flex;
               align-items: center;
               text-align: left;
-              width: 35%;
-              height: 43%;
+              width: 42%;
+              height: 40%;
               margin-left: 17%;
-              border-left: 2px solid $secondary-color;
+              border-left: 1px solid #3f3f3f;
               padding-left: 3.5rem;
 
               p {
-                font-size: 2rem;
-                font-weight: 300;
-                margin-bottom: 1rem;
+                color: #ffe79f;
+                font-size: 1.6rem;
+                font-weight: 400;
+                margin-bottom: 1.8rem;
                 padding-top: 1rem;
+                text-transform: uppercase;
               }
 
               h2 {
                 text-transform: uppercase;
                 margin-left: -7px;
                 font-size: 4rem;
-                font-weight: 600;
+                font-weight: 700;
                 padding-bottom: 0.8rem;
-                border-bottom: 2px solid $secondary-color;
+                line-height: 4.3rem;
+                // border-bottom: 2px solid $secondary-color;
               }
 
               span {
                 display: block;
                 padding-bottom: 0.5rem;
+              }
+
+              .bottom-line {
+                justify-content: flex-start;
               }
             }
           }
@@ -234,15 +247,15 @@ ul {
             &::before {
               background-image: linear-gradient(
                 90deg,
-                rgba(0, 0, 0, 0.8),
-                rgba(0, 0, 0, 0)
+                rgba(10, 10, 10, 1),
+                rgba(10, 10, 10, 0)
               );
             }
 
             .slide-content {
-              width: 39%;
-              height: 50%;
-              border-left: 2px solid $secondary-color;
+              width: 50%;
+              height: 40%;
+              border-left: 1px solid #7c6a39;
               margin-left: 17%;
 
               display: flex;
@@ -251,19 +264,19 @@ ul {
               padding-left: 3.5rem;
               text-align: left;
               font-weight: 500;
+              text-transform: uppercase;
 
               h3 {
                 margin-left: -6px;
-                padding-bottom: 0.7rem;
-                border-bottom: 2px solid $secondary-color;
+                padding-bottom: 1.5rem;
+                font-size: 4rem;
               }
 
               ul {
-                margin-top: 0.9rem;
-                font-size: 3rem;
+                font-size: 2rem;
 
                 li {
-                  margin-bottom: 0.6rem;
+                  margin-bottom: 0.7rem;
                 }
               }
             }
@@ -281,8 +294,8 @@ ul {
             &::before {
               background-image: linear-gradient(
                 90deg,
-                rgba(0, 0, 0, 0.8),
-                rgba(0, 0, 0, 0.4)
+                rgba(10, 10, 10, 1),
+                rgba(10, 10, 10, 0.1)
               );
             }
 
@@ -290,9 +303,9 @@ ul {
               display: flex;
               align-items: center;
 
-              span {
-                border-bottom: 2px solid $secondary-color;
-              }
+              // span {
+              //   border-bottom: 1px solid $secondary-color;
+              // }
             }
           }
         }

@@ -40,7 +40,7 @@
   color: #101010; }
 
 .text-secondary {
-  color: #ffc758; }
+  color: #ffcb62; }
 
 .text-light {
   color: #f4f4f4; }
@@ -85,7 +85,7 @@
   background-color: #101010; }
 
 .bg-secondary {
-  background-color: #ffc758; }
+  background-color: #ffcb62; }
 
 .bg-light {
   background-color: #f4f4f4; }
@@ -101,7 +101,7 @@
     cursor: pointer; }
 
 .btn-secondary {
-  background: #ffc758;
+  background: #ffcb62;
   padding: 1.2rem 1.8rem;
   border: none;
   color: #101010;
@@ -135,7 +135,7 @@
   .bottom-line-primary {
     background: #101010; }
   .bottom-line-secondary {
-    background: #ffc758; }
+    background: #ffcb62; }
     .bottom-line-secondary-short {
       width: 7%; }
 
@@ -180,13 +180,15 @@ ul {
       display: flex;
       align-items: center;
       color: #f4f4f4;
-      font-weight: 500; }
+      font-weight: 600;
+      font-family: 'Yanone Kaffeesatz', sans-serif;
+      font-size: 1.3rem; }
       #navbar .navbar-content .phone img {
         margin-right: 0.8rem; }
     #navbar .navbar-content .logo {
       display: flex;
       align-items: center;
-      color: #ffc758; }
+      color: #ffe79f; }
       #navbar .navbar-content .logo h2 {
         font-weight: normal;
         font-size: 1.4rem;
@@ -213,7 +215,7 @@ ul {
         padding-bottom: 0.15rem;
         transition: border-color 0.5s; }
         #navbar .navbar-content li a.current {
-          border-color: #ffc758; }
+          border-color: #ffcb62; }
         #navbar .navbar-content li a:hover {
           border-color: #f4f4f4; }
 
@@ -229,8 +231,8 @@ ul {
     position: absolute;
     top: 50%;
     margin-top: -20px;
-    text-shadow: 0 0 3px #101010;
-    color: #ffc758;
+    text-shadow: 0 0 3px #202020;
+    color: #ffcb62;
     z-index: 2;
     transition: all 0.3s ease-in-out; }
     #showcase .wrap .arrow:hover {
@@ -265,6 +267,7 @@ ul {
     #showcase .wrap #slider .slide-1 {
       background-image: url("../img/slider/slide1.jpg"); }
       #showcase .wrap #slider .slide-1 .slide-container {
+        border-bottom: 1px solid #161616;
         display: flex;
         align-items: center; }
         #showcase .wrap #slider .slide-1 .slide-container::before {
@@ -273,53 +276,57 @@ ul {
           display: flex;
           align-items: center;
           text-align: left;
-          width: 35%;
-          height: 43%;
+          width: 42%;
+          height: 40%;
           margin-left: 17%;
-          border-left: 2px solid #ffc758;
+          border-left: 1px solid #3f3f3f;
           padding-left: 3.5rem; }
           #showcase .wrap #slider .slide-1 .slide-container .slide-content p {
-            font-size: 2rem;
-            font-weight: 300;
-            margin-bottom: 1rem;
-            padding-top: 1rem; }
+            color: #ffe79f;
+            font-size: 1.6rem;
+            font-weight: 400;
+            margin-bottom: 1.8rem;
+            padding-top: 1rem;
+            text-transform: uppercase; }
           #showcase .wrap #slider .slide-1 .slide-container .slide-content h2 {
             text-transform: uppercase;
             margin-left: -7px;
             font-size: 4rem;
-            font-weight: 600;
+            font-weight: 700;
             padding-bottom: 0.8rem;
-            border-bottom: 2px solid #ffc758; }
+            line-height: 4.3rem; }
           #showcase .wrap #slider .slide-1 .slide-container .slide-content span {
             display: block;
             padding-bottom: 0.5rem; }
+          #showcase .wrap #slider .slide-1 .slide-container .slide-content .bottom-line {
+            justify-content: flex-start; }
     #showcase .wrap #slider .slide-2 {
       background-image: url("../img/slider/slide2.jpg"); }
       #showcase .wrap #slider .slide-2 .slide-container {
         display: flex;
         align-items: center; }
         #showcase .wrap #slider .slide-2 .slide-container::before {
-          background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); }
+          background-image: linear-gradient(90deg, #0a0a0a, rgba(10, 10, 10, 0)); }
         #showcase .wrap #slider .slide-2 .slide-container .slide-content {
-          width: 39%;
-          height: 50%;
-          border-left: 2px solid #ffc758;
+          width: 50%;
+          height: 40%;
+          border-left: 1px solid #7c6a39;
           margin-left: 17%;
           display: flex;
           flex-direction: column;
           justify-content: center;
           padding-left: 3.5rem;
           text-align: left;
-          font-weight: 500; }
+          font-weight: 500;
+          text-transform: uppercase; }
           #showcase .wrap #slider .slide-2 .slide-container .slide-content h3 {
             margin-left: -6px;
-            padding-bottom: 0.7rem;
-            border-bottom: 2px solid #ffc758; }
+            padding-bottom: 1.5rem;
+            font-size: 4rem; }
           #showcase .wrap #slider .slide-2 .slide-container .slide-content ul {
-            margin-top: 0.9rem;
-            font-size: 3rem; }
+            font-size: 2rem; }
             #showcase .wrap #slider .slide-2 .slide-container .slide-content ul li {
-              margin-bottom: 0.6rem; }
+              margin-bottom: 0.7rem; }
     #showcase .wrap #slider .slide-3 {
       background-image: url("../img/slider/slide3.jpg"); }
       #showcase .wrap #slider .slide-3 .slide-container {
@@ -327,12 +334,10 @@ ul {
         align-items: center;
         justify-content: center; }
         #showcase .wrap #slider .slide-3 .slide-container::before {
-          background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)); }
+          background-image: linear-gradient(90deg, #0a0a0a, rgba(10, 10, 10, 0.1)); }
         #showcase .wrap #slider .slide-3 .slide-container .slide-content {
           display: flex;
           align-items: center; }
-          #showcase .wrap #slider .slide-3 .slide-container .slide-content span {
-            border-bottom: 2px solid #ffc758; }
     #showcase .wrap #slider .slide .text-bottom {
       height: 5rem;
       background: #101010;
@@ -355,7 +360,7 @@ ul {
         text-transform: uppercase;
         padding-bottom: 0.2rem; }
         #gallery .gallery-wrap .gallery-heading h2 span {
-          color: #ffc758;
+          color: #ffcb62;
           font-weight: 700; }
       #gallery .gallery-wrap .gallery-heading p {
         color: #f4f4f4;
@@ -406,7 +411,7 @@ ul {
         font-weight: 500;
         text-transform: uppercase; }
         #services .services-wrap .services-heading h2 span {
-          color: #ffc758;
+          color: #ffcb62;
           font-weight: 700; }
       #services .services-wrap .services-heading p {
         color: #f4f4f4;
@@ -465,7 +470,7 @@ ul {
 
 #contacts {
   width: 100%;
-  background: #ffc758; }
+  background: #ffcb62; }
   #contacts .contacts-heading {
     padding-top: 3rem;
     position: relative;
@@ -567,7 +572,7 @@ section.up-button {
           #footer .footer-content .social .container .icons .icon {
             padding-right: 0.8rem; }
             #footer .footer-content .social .container .icons .icon a:hover {
-              color: #ffc758; }
+              color: #ffcb62; }
 
 .fancybox-navigation .fancybox-button {
   padding: 26px 6px 26px 16px; }
