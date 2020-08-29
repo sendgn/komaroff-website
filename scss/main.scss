@@ -9,17 +9,13 @@
 
 html,
 body {
-  // height: 100%;
+  height: 100%;
   background: $dark-color;
   font-family: "Montserrat", sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
-}
-
-body {
-  position: relative;
 }
 
 a {
@@ -39,7 +35,7 @@ ul {
   z-index: 5;
 
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.20);
   transition: background 0.5s ease-in;
 
   .navbar-content {
@@ -115,21 +111,14 @@ ul {
 
 // Showcase area
 #showcase {
-  height: 936px;
-
   // Slider
   #slider,
   .slide-container {
     width: 100%;
-    height: 91.5vh;
-  }
-
-  .slide-container {
-    position: relative;
+    height: 100vh;
   }
 
   .wrap {
-    position: relative;
     top: 5rem;
 
     // Arrows
@@ -189,7 +178,6 @@ ul {
 
         &-1 {
           background-image: url("../img/slider/slide1.jpg");
-          // background-position-y: -550px;
           .slide-container {
             display: flex;
             align-items: center;
@@ -207,25 +195,25 @@ ul {
               align-items: center;
               text-align: left;
               width: 35%;
-              height: 50%;
+              height: 43%;
               margin-left: 17%;
-              border-left: 5px solid $secondary-color;
+              border-left: 2px solid $secondary-color;
               padding-left: 3.5rem;
 
               p {
-                font-weight: 600;
+                font-size: 2rem;
+                font-weight: 300;
                 margin-bottom: 1rem;
-                padding-top: 1.5rem;
-                padding-bottom: 1.5rem;
+                padding-top: 1rem;
               }
 
               h2 {
                 text-transform: uppercase;
                 margin-left: -7px;
-                font-size: 4.2rem;
-                font-weight: 700;
-                padding-bottom: 1rem;
-                border-bottom: 5px solid $secondary-color;
+                font-size: 4rem;
+                font-weight: 600;
+                padding-bottom: 0.8rem;
+                border-bottom: 2px solid $secondary-color;
               }
 
               span {
@@ -254,7 +242,7 @@ ul {
             .slide-content {
               width: 39%;
               height: 50%;
-              border-left: 5px solid $secondary-color;
+              border-left: 2px solid $secondary-color;
               margin-left: 17%;
 
               display: flex;
@@ -262,12 +250,12 @@ ul {
               justify-content: center;
               padding-left: 3.5rem;
               text-align: left;
-              font-weight: 600;
+              font-weight: 500;
 
               h3 {
                 margin-left: -6px;
                 padding-bottom: 0.7rem;
-                border-bottom: 5px solid $secondary-color;
+                border-bottom: 2px solid $secondary-color;
               }
 
               ul {
@@ -303,7 +291,7 @@ ul {
               align-items: center;
 
               span {
-                border-bottom: 5px solid $secondary-color;
+                border-bottom: 2px solid $secondary-color;
               }
             }
           }
@@ -330,7 +318,7 @@ ul {
 
     .gallery-heading {
       width: 100%;
-      padding: 2rem 0;
+      padding: 4rem 0;
       background: $primary-color;
 
       h2 {
@@ -354,11 +342,13 @@ ul {
     }
 
     .photos {
-      max-width: 1266px;
-      margin: auto;
+      // max-width: 1266px;
       overflow: hidden;
 
       .imgs {
+        width: 90%;
+        margin: auto;
+
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 0.5rem;
