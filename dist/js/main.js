@@ -94,8 +94,15 @@ for (let i = 0; i < coll.length; i++) {
     const content = this.nextElementSibling;
     const expandIcon = this.children[0];
 
+    // Collapse list when scrolling
+    window.addEventListener("scroll", () => {
+      console.log("scrolling...");
+      content.style.maxHeight = null;
+      expandIcon.style.background =
+        'url("./img/plus.png") no-repeat center center/cover';
+    });
+
     if (content.style.maxHeight) {
-      console.log(content.style.maxHeight);
       content.style.maxHeight = null;
       expandIcon.style.background =
         'url("./img/plus.png") no-repeat center center/cover';

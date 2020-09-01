@@ -93,7 +93,7 @@
 .btn {
   width: 1268px;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-transform: uppercase; }
 
 .btn-primary {
@@ -415,7 +415,7 @@ ul {
         font-size: 1.1rem;
         padding: 0.3rem 0; }
     #services .services-wrap .services-wrapper {
-      max-width: 1268px;
+      max-width: 968px;
       margin: 0 auto; }
       #services .services-wrap .services-wrapper .services-block {
         color: #101010; }
