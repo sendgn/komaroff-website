@@ -50,9 +50,7 @@ ul {
       display: flex;
       align-items: center;
       color: $light-color;
-      font-weight: 600;
-      font-family: 'Yanone Kaffeesatz', sans-serif;
-      font-size: 1.3rem;
+      font-weight: 500;
 
       img {
         margin-right: 0.8rem;
@@ -154,7 +152,7 @@ ul {
         background-position: center;
         background-repeat: no-repeat;
         // todo fix shadow
-        text-shadow: 0 0 2px $primary-color;
+        // text-shadow: 0 0 35px $dark-color;
 
         .slide-container {
           text-align: center;
@@ -184,7 +182,7 @@ ul {
           
 
           .slide-container {
-            border-bottom: 1px solid #161616;
+            // border-bottom: 1px solid #292929;
             display: flex;
             align-items: center;
 
@@ -327,12 +325,21 @@ ul {
 
   .gallery-wrap {
     padding-bottom: 5rem;
-    background: $primary-color;
+    // background: $primary-color;
+    background: linear-gradient(
+      90deg,
+      $primary-color 50%,
+      $dark-color
+    );
 
     .gallery-heading {
       width: 100%;
       padding: 4rem 0;
-      background: $primary-color;
+      background: linear-gradient(
+        90deg,
+        $primary-color 50%,
+        $dark-color
+      );
 
       h2 {
         color: $light-color;
