@@ -3,16 +3,19 @@ window.addEventListener("scroll", function() {
   if (window.scrollY > 50) {
     this.document.querySelector("#navbar").style.background =
       "rgba(0, 0, 0, 0.8)";
+    // this.document.querySelector("#navbar").style.backdropFilter = "blur(2px)";
+    
   } else {
     this.document.querySelector("#navbar").style.background =
       "rgba(0, 0, 0, 0.20)";
+    // this.document.querySelector("#navbar").style.backdropFilter = "none";
   }
 });
 
 /* Current navigation bar element */
 let mainNavLinks = document.querySelectorAll("nav ul li a");
 
-window.addEventListener("scroll", event => {
+window.addEventListener("scroll", () => {
   let fromTop = window.scrollY;
   const navHeight = 81;
 
@@ -32,7 +35,6 @@ window.addEventListener("scroll", event => {
 
 /* Smooth scrolling */
 const nav = document.querySelector("#navbar");
-console.log(nav);
 
 mainNavLinks.forEach(link => {
   link.addEventListener("click", event => {

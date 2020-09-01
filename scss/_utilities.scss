@@ -112,13 +112,18 @@
 .bg-light {
   background-color: $light-color;
 }
+.btn {
+  width: 1268px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
 
 .btn-primary {
   background: $primary-color;
   padding: 1.2rem 1.8rem;
   border: none;
   color: $light-color;
-  font-size: 1rem;
   font-family: "Montserrat", sans-serif;
 
   &:hover {
@@ -131,7 +136,6 @@
   padding: 1.2rem 1.8rem;
   border: none;
   color: $primary-color;
-  font-size: 1rem;
 
   &:hover {
     cursor: pointer;
@@ -143,7 +147,6 @@
   padding: 1.2rem 1.8rem;
   border: none;
   color: $light-color;
-  font-size: 1rem;
   font-family: "Montserrat", sans-serif;
 
   &:hover {
@@ -166,10 +169,11 @@
 .bottom-line {
   margin: 1.5rem auto;
   width: 15%;
-  height: 2px;
+  height: 1px;
 
   &-primary {
-    background: $primary-color;
+    background: $dark-color;
+    height: 3px;
   }
 
   &-secondary {
@@ -179,8 +183,4 @@
       width: 7%;
     }
   }
-}
-
-.transparent {
-  opacity: 0.5
 }
