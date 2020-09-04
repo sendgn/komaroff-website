@@ -79,7 +79,7 @@
   padding: 3rem 0; }
 
 .bg-dark {
-  background-color: #202020; }
+  background-color: #131110; }
 
 .bg-primary {
   background-color: #101010; }
@@ -91,10 +91,8 @@
   background-color: #f4f4f4; }
 
 .btn {
-  width: 1268px;
   font-weight: 600;
-  font-size: 1.1rem;
-  text-transform: uppercase; }
+  font-size: 1.2rem; }
 
 .btn-primary {
   background: #101010;
@@ -109,12 +107,17 @@
   background: #ffcb62;
   padding: 1.2rem 1.8rem;
   border: none;
-  color: #101010; }
+  color: #101010;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 700; }
   .btn-secondary:hover {
     cursor: pointer; }
 
 .btn-dark {
-  background: #202020;
+  width: 1268px;
+  background: #131110;
   padding: 1.2rem 1.8rem;
   border: none;
   color: #f4f4f4;
@@ -136,12 +139,14 @@
   width: 15%;
   height: 1px; }
   .bottom-line-primary {
-    background: #202020;
+    background: #131110;
     height: 3px; }
   .bottom-line-secondary {
     background: #ffcb62; }
     .bottom-line-secondary-short {
       width: 7%; }
+    .bottom-line-secondary-long {
+      width: 25%; }
 
 * {
   margin: 0;
@@ -151,7 +156,7 @@
 html,
 body {
   height: 100%;
-  background: #202020;
+  background: linear-gradient(90deg, #101010 20%, #131110);
   font-family: "Montserrat", sans-serif; }
 
 html {
@@ -214,7 +219,7 @@ ul {
         text-decoration: none;
         text-transform: uppercase;
         border-bottom: 1px solid transparent;
-        padding-bottom: 0.15rem;
+        padding-bottom: 0.3rem;
         transition: border-color 0.5s; }
         #navbar .navbar-content li a.current {
           border-color: #ffcb62; }
@@ -233,7 +238,7 @@ ul {
     position: absolute;
     top: 50%;
     margin-top: -20px;
-    text-shadow: 0 0 3px #202020;
+    text-shadow: 0 0 3px #131110;
     color: #ffcb62;
     z-index: 2;
     transition: all 0.3s ease-in-out; }
@@ -251,35 +256,23 @@ ul {
     background-repeat: no-repeat; }
     #showcase .wrap #slider .slide .slide-container {
       text-align: center;
-      position: relative;
-      z-index: 1; }
-      #showcase .wrap #slider .slide .slide-container::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%; }
+      position: relative; }
       #showcase .wrap #slider .slide .slide-container .slide-content {
-        position: absolute;
         color: #f4f4f4;
-        height: 100%;
-        z-index: 2; }
+        height: 100%; }
     #showcase .wrap #slider .slide-1 {
-      background-image: url("../img/slider/slide1.jpg"); }
+      background-image: url("../img/slider/slide1.png"); }
       #showcase .wrap #slider .slide-1 .slide-container {
         display: flex;
         align-items: center; }
-        #showcase .wrap #slider .slide-1 .slide-container::before {
-          background-image: linear-gradient(90deg, black, rgba(0, 0, 0, 0)); }
         #showcase .wrap #slider .slide-1 .slide-container .slide-content {
           display: flex;
           align-items: center;
           text-align: left;
           width: 42%;
           height: 40%;
-          margin-left: 17%;
-          border-left: 1px solid #3f3f3f;
+          margin-left: 13%;
+          border-left: 1px solid #888888;
           padding-left: 3.5rem; }
           #showcase .wrap #slider .slide-1 .slide-container .slide-content p {
             color: #ffe79f;
@@ -294,7 +287,7 @@ ul {
             font-size: 4rem;
             font-weight: 700;
             padding-bottom: 0.8rem;
-            line-height: 4.3rem; }
+            line-height: 4.4rem; }
           #showcase .wrap #slider .slide-1 .slide-container .slide-content span {
             display: block;
             padding-bottom: 0.5rem; }
@@ -310,7 +303,7 @@ ul {
         #showcase .wrap #slider .slide-2 .slide-container .slide-content {
           width: 50%;
           height: 40%;
-          border-left: 1px solid #7c6a39;
+          border-left: 2px solid #7c6a39;
           margin-left: 17%;
           display: flex;
           flex-direction: column;
@@ -345,11 +338,10 @@ ul {
       color: #f4f4f4; }
 
 #gallery .gallery-wrap {
-  padding-bottom: 5rem;
-  background: linear-gradient(90deg, #101010 50%, #202020); }
+  padding-bottom: 5rem; }
   #gallery .gallery-wrap .gallery-heading {
     padding: 2.8rem 0;
-    background: linear-gradient(90deg, #101010 50%, #202020); }
+    background: linear-gradient(90deg, #101010 50%, #131110); }
     #gallery .gallery-wrap .gallery-heading h2 {
       color: #f4f4f4;
       font-size: 3rem;
@@ -459,7 +451,7 @@ ul {
               background: url("../img/plus.png") no-repeat center center/cover;
               height: 1.2rem;
               width: 1.2rem;
-              color: #202020; }
+              color: #131110; }
           #services .services-wrap .services-wrapper .services-block .category .content {
             overflow: auto;
             max-height: 0;
@@ -471,7 +463,7 @@ ul {
   #contacts .contacts-heading {
     padding-top: 2rem;
     position: relative;
-    color: #202020; }
+    color: #131110; }
     #contacts .contacts-heading h3 {
       font-size: 2.4rem;
       font-weight: 600; }
@@ -494,7 +486,7 @@ ul {
           grid-area: message;
           height: 100px; }
         #contacts .container form .text-fields .text-input {
-          background: #202020;
+          background: #131110;
           border: none;
           font-family: "Montserrat", sans-serif;
           font-size: 0.9rem;
@@ -506,20 +498,22 @@ ul {
         margin: 2rem; }
 
 #phone-section {
-  background: #202020;
+  background: #101010;
   color: #f4f4f4;
   padding: 2rem 0; }
   #phone-section .container {
     position: relative; }
-  #phone-section .phone-number {
-    color: #f4f4f4;
-    font-size: 2.4rem; }
   #phone-section h2 {
     font-size: 2.4rem;
     font-weight: 500; }
   #phone-section p {
-    font-size: 1.7rem;
-    font-weight: 500; }
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: #fff; }
+  #phone-section .phone-number {
+    font-weight: 500;
+    color: #f4f4f4;
+    font-size: 2.4rem; }
 
 section.up-button {
   position: fixed;
@@ -536,11 +530,11 @@ section.up-button {
     color: #fff;
     transition: all 0.2s ease-out; }
     section.up-button i:hover {
-      border-color: #ffcb62;
-      color: #ffcb62; }
+      border-color: #ffe79f;
+      color: #ffe79f; }
 
 #footer {
-  background: #101010; }
+  background: #131110; }
   #footer .footer-content {
     position: relative;
     padding: 2rem 0;

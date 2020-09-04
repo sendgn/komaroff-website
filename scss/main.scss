@@ -10,7 +10,12 @@
 html,
 body {
   height: 100%;
-  background: $dark-color;
+  // background: $dark-color;
+  background: linear-gradient(
+        90deg,
+        $primary-color 20%,
+        $dark-color
+      );
   font-family: "Montserrat", sans-serif;
 }
 
@@ -60,7 +65,7 @@ ul {
     .logo {
       display: flex;
       align-items: center;
-      color: #ffe79f;
+      color: $tertiary-color;
 
       // TODO: Make logo to be fully image, i.e. get rid of h2
       h2 {
@@ -94,7 +99,7 @@ ul {
         text-decoration: none;
         text-transform: uppercase;
         border-bottom: 1px solid transparent;
-        padding-bottom: 0.15rem;
+        padding-bottom: 0.3rem;
         transition: border-color 0.5s;
 
         &.current {
@@ -152,47 +157,24 @@ ul {
         background-position: center;
         background-repeat: no-repeat;
         // todo fix shadow
-        // text-shadow: 0 0 35px $dark-color;
+        // text-shadow: 0 0 40px $primary-color;
 
         .slide-container {
           text-align: center;
           position: relative;
-          z-index: 1;
-
-          // Dark Overlay
-          &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-          }
 
           .slide-content {
-            position: absolute;
             color: $light-color;
             height: 100%;
-            z-index: 2;
           }
         }
 
         &-1 {
-          background-image: url("../img/slider/slide1.jpg");
-          
+          background-image: url("../img/slider/slide1.png");
 
           .slide-container {
-            // border-bottom: 1px solid #292929;
             display: flex;
             align-items: center;
-
-            &::before {
-              background-image: linear-gradient(
-                90deg,
-                rgba(0, 0, 0, 1),
-                rgba(0, 0, 0, 0)
-              );
-            }
 
             .slide-content {
               display: flex;
@@ -200,12 +182,13 @@ ul {
               text-align: left;
               width: 42%;
               height: 40%;
-              margin-left: 17%;
-              border-left: 1px solid #3f3f3f;
+              margin-left: 13%;
+              border-left: 1px solid $medium-color;
+
               padding-left: 3.5rem;
 
               p {
-                color: #ffe79f;
+                color: $tertiary-color;
                 font-size: 1.6rem;
                 font-weight: 400;
                 margin-bottom: 1.8rem;
@@ -219,7 +202,7 @@ ul {
                 font-size: 4rem;
                 font-weight: 700;
                 padding-bottom: 0.8rem;
-                line-height: 4.3rem;
+                line-height: 4.4rem;
                 // border-bottom: 2px solid $secondary-color;
               }
 
@@ -253,7 +236,7 @@ ul {
             .slide-content {
               width: 50%;
               height: 40%;
-              border-left: 1px solid #7c6a39;
+              border-left: 2px solid #7c6a39;
               margin-left: 17%;
 
               display: flex;
@@ -321,18 +304,18 @@ ul {
 
 // Photo Gallery
 #gallery {
-
   .gallery-wrap {
     padding-bottom: 5rem;
-    background: linear-gradient(
-      90deg,
-      $primary-color 50%,
-      $dark-color
-    );
-
+    // background: linear-gradient(
+    //   90deg,
+    //   $primary-color 50%,
+    //   $dark-color
+    // );
 
     .gallery-heading {
       padding: 2.8rem 0;
+      // background: $dark-color;
+      
       background: linear-gradient(
         90deg,
         $primary-color 50%,
@@ -587,27 +570,29 @@ ul {
 
 // Phone number
 #phone-section {
-  background: $dark-color;
+  background: $primary-color;
   color: $light-color;
   padding: 2rem 0;
 
   .container {
     position: relative;
   }
-
-  .phone-number {
-    color: $light-color;
-    font-size: 2.4rem;
-  }
-
+  
   h2 {
     font-size: 2.4rem;
     font-weight: 500;
   }
-
+  
   p {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: #fff;
+  }
+
+  .phone-number {
     font-weight: 500;
+    color: $light-color;
+    font-size: 2.4rem;
   }
 }
 
@@ -636,7 +621,7 @@ section.up-button {
 
 // Footer
 #footer {
-  background: $primary-color;
+  background: $dark-color;
 
   .footer-content {
     position: relative;

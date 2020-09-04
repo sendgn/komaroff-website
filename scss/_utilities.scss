@@ -112,11 +112,10 @@
 .bg-light {
   background-color: $light-color;
 }
+
 .btn {
-  width: 1268px;
   font-weight: 600;
-  font-size: 1.1rem;
-  text-transform: uppercase;
+  font-size: 1.2rem;
 }
 
 .btn-primary {
@@ -136,6 +135,10 @@
   padding: 1.2rem 1.8rem;
   border: none;
   color: $primary-color;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 700;
 
   &:hover {
     cursor: pointer;
@@ -143,6 +146,7 @@
 }
 
 .btn-dark {
+  width: 1268px;
   background: $dark-color;
   padding: 1.2rem 1.8rem;
   border: none;
@@ -181,6 +185,10 @@
 
     &-short {
       width: 7%;
+    }
+
+    &-long {
+      width: 25%;
     }
   }
 }
