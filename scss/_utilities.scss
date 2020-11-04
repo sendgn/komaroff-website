@@ -114,60 +114,28 @@
 }
 
 .btn {
+  font-family: "Montserrat", serif;
   font-weight: 600;
   font-size: 1.2rem;
-}
-
-.btn-primary {
-  background: $primary-color;
   padding: 1.2rem 1.8rem;
   border: none;
-  color: $light-color;
-  font-family: "Montserrat", sans-serif;
+  border-radius: 3px;
 
   &:hover {
     cursor: pointer;
-  }
-}
-
-.btn-secondary {
-  background: $secondary-color;
-  padding: 1.2rem 1.8rem;
-  border: none;
-  color: $primary-color;
-  font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  font-weight: 700;
-
-  &:hover {
-    cursor: pointer;
+    opacity: 0.9;
   }
 }
 
 .btn-dark {
   width: 1268px;
   background: $dark-color;
-  padding: 1.2rem 1.8rem;
-  border: none;
   color: $light-color;
-  font-family: "Montserrat", sans-serif;
-
-  &:hover {
-    cursor: pointer;
-  }
 }
 
 .btn-light {
-  background: $light-color;
-  padding: 1.2rem 1.8rem;
-  border: none;
+  background: $secondary-color;
   color: $primary-color;
-  font-size: 1rem;
-
-  &:hover {
-    cursor: pointer;
-  }
 }
 
 .bottom-line {
