@@ -313,6 +313,10 @@ ul {
   top: 5rem;
 }
 
+#showcase .wrap ion-icon {
+  font-size: 32px;
+}
+
 #showcase .wrap .arrow {
   cursor: pointer;
   position: absolute;
@@ -347,7 +351,6 @@ ul {
 
 #showcase .wrap #slider .slide .slide-container {
   text-align: center;
-  position: relative;
 }
 
 #showcase .wrap #slider .slide .slide-container .slide-content {
@@ -372,12 +375,19 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
   text-align: left;
-  width: 42%;
-  height: 40%;
+  width: 700px;
+  height: 380px;
   margin-left: 13%;
   border-left: 1px solid #ffcb62;
   padding-left: 3.5rem;
@@ -387,23 +397,20 @@ ul {
   color: #ffe79f;
   font-size: 1.6rem;
   font-weight: 400;
-  margin-bottom: 1.8rem;
-  padding-top: 1rem;
   text-transform: uppercase;
 }
 
 #showcase .wrap #slider .slide-1 .slide-container .slide-content h2 {
   text-transform: uppercase;
-  margin-left: -7px;
-  margin-bottom: 1.8rem;
-  font-size: 4rem;
+  margin: 1.8rem 0 2.5rem -0.4rem;
+  font-size: 3.6rem;
   font-weight: 500;
   line-height: 4.4rem;
 }
 
 #showcase .wrap #slider .slide-1 .slide-container .slide-content a {
   display: block;
-  width: 40%;
+  width: 250px;
   text-transform: uppercase;
   text-align: center;
   font-size: 1rem;
@@ -413,7 +420,6 @@ ul {
 
 #showcase .wrap #slider .slide-1 .slide-container .slide-content span {
   display: block;
-  padding-bottom: 0.5rem;
 }
 
 #showcase .wrap #slider .slide-1 .slide-container .slide-content .bottom-line {
