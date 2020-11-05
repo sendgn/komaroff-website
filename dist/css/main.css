@@ -405,7 +405,7 @@ ul {
   margin: 1.2rem 0 2.8rem -0.4rem;
   font-size: 3.8rem;
   font-weight: 500;
-  line-height: 5rem;
+  line-height: 1.3;
 }
 
 #showcase .wrap #slider .slide-1 .slide-container .slide-content a.btn {
