@@ -10,11 +10,7 @@
 html,
 body {
   height: 100%;
-  background: linear-gradient(
-        90deg,
-        $primary-color 20%,
-        $dark-color
-      );
+  background: $primary-color;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -64,7 +60,7 @@ ul {
     .logo {
       display: flex;
       align-items: center;
-      color: $tertiary-color;
+      color: $secondary-color;
 
       // TODO: Make logo to be fully image, i.e. get rid of h2
       h2 {
@@ -125,7 +121,7 @@ ul {
   .wrap {
     top: 5rem;
     ion-icon {
-      font-size: 32px;
+      font-size: 40px;
     }
 
     // Arrows
@@ -189,28 +185,28 @@ ul {
               padding-left: 3.5rem;
 
               p {
-                color: $tertiary-color;
-                font-size: 1.6rem;
-                font-weight: 400;
+                color: $secondary-color;
+                font-size: 1.7rem;
+                font-weight: 300;
                 text-transform: uppercase;
               }
 
               h2 {
                 text-transform: uppercase;
-                margin: 1.8rem 0 2.5rem -0.4rem;
-                font-size: 3.6rem;
-                font-weight: 500;
-                line-height: 4.4rem;
+                margin: 1.2rem 0 2.8rem -0.4rem;
+                font-size: 3.8rem;
+                font-weight: 400;
+                line-height: 5rem;
               }
 
-              a {
+              a.btn {
                 display: block;
-                width: 250px;
+                width: 230px;
                 text-transform: uppercase;
                 text-align: center;
                 font-size: 1rem;
                 font-weight: 700;
-                padding: 15px 20px;
+                padding: 20px 20px;
               }
 
               span {
@@ -345,12 +341,11 @@ ul {
 
     .gallery-heading {
       padding: 2.8rem 0;
-      
-      background: linear-gradient(
-        90deg,
-        $primary-color 50%,
-        $dark-color
-      );
+      // background: linear-gradient(
+      //   90deg,
+      //   $primary-color 50%,
+      //   $dark-color
+      // );
 
       h2 {
         color: $light-color;
@@ -533,7 +528,8 @@ ul {
 // Contacts
 #contacts {
   width: 100%;
-  background: $secondary-color;
+  // background: $secondary-color;
+  background: url('../img/halftone-yellow.png') repeat center center;
 
   .contacts-heading {
     padding-top: 2rem;
@@ -543,7 +539,6 @@ ul {
     h3 {
       font-size: 2.4rem;
       font-weight: 600;
-      // padding-bottom: 0.5rem;
     }
   }
 
@@ -590,7 +585,7 @@ ul {
           color: $light-color;
 
           &::placeholder {
-            color: $medium-color;
+            color: #8f8f8f;
           }
         }
       }
@@ -604,29 +599,31 @@ ul {
 
 // Phone number
 #phone-section {
-  background: $primary-color;
+  background: $dark-color;
   color: $light-color;
   padding: 2rem 0;
 
   .container {
-    position: relative;
-  }
-  
-  h2 {
-    font-size: 2.4rem;
-    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 43px 0;
   }
   
   p {
-    font-size: 1.5rem;
+    font-size: 2.4rem;
     font-weight: 200;
     color: #fff;
+    padding-left: 30px;
   }
 
-  .phone-number {
-    font-weight: 500;
+  h2.phone-number {
+    font-weight: 300;
     color: $light-color;
     font-size: 2.4rem;
+    padding-right: 30px;
+    border-right: 1px solid $secondary-color;
   }
 }
 
@@ -647,15 +644,15 @@ section.up-button {
     transition: all 0.2s ease-out;
 
     &:hover {
-      border-color: $tertiary-color;
-      color: $tertiary-color;
+      border-color: $secondary-color;
+      color: $secondary-color;
     }
   }
 }
 
 // Footer
 #footer {
-  background: $dark-color;
+  background: $primary-color;
 
   .footer-content {
     position: relative;
