@@ -50,7 +50,8 @@ ul {
       display: flex;
       align-items: center;
       color: $light-color;
-      font-weight: 500;
+      font-weight: 400;
+      letter-spacing: 0.1rem;
 
       img {
         margin-right: 0.8rem;
@@ -181,7 +182,7 @@ ul {
               width: 700px;
               height: 380px;
               margin-left: 13%;
-              border-left: 1px solid $secondary-color;
+              border-left: 1px solid #4d4d4d;
               padding-left: 3.5rem;
 
               p {
@@ -195,7 +196,7 @@ ul {
                 text-transform: uppercase;
                 margin: 1.2rem 0 2.8rem -0.4rem;
                 font-size: 3.8rem;
-                font-weight: 400;
+                font-weight: 500;
                 line-height: 5rem;
               }
 
@@ -608,7 +609,7 @@ ul {
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: 43px 0;
+    margin: 40px 0;
   }
   
   p {
@@ -622,7 +623,8 @@ ul {
     font-weight: 300;
     color: $light-color;
     font-size: 2.4rem;
-    padding-right: 30px;
+    padding: 3px 30px 3px 0;
+
     border-right: 1px solid $secondary-color;
   }
 }
